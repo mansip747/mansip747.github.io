@@ -18,5 +18,13 @@
     {
         "name": "WordPress",
         "icon": "https://img.icons8.com/color/48/000000/wordpress.png"
-    }    
+    },    
+    {
+        "name": "AWS",
+        "icon": "https://img.icons8.com/color/48/000000/amazon-web-services.png"
+    },
+    {
+        "name": "Power BI",
+        "icon":"https://img.icons8.com/?size=100&id=03aYi0fY0D9X&format=png&color=000000"
+    }
 ]
