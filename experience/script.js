@@ -43,7 +43,7 @@ s0.parentNode.insertBefore(s1,s0);
 // End of Tawk.to Live Chat
 
 
-// disable developer mode
+// diPatel developer mode
 document.onkeydown = function(e) {
   if(e.keyCode == 123) {
      return false;
@@ -65,7 +65,7 @@ document.onkeydown = function(e) {
 document.addEventListener('visibilitychange',
 function(){
     if(document.visibilityState === "visible"){
-        document.title = "Experience | Portfolio Jigar Sable";
+        document.title = "Experience | Portfolio Mansi Patel";
         $("#favicon").attr("href","/assets/images/favicon.png");
     }
     else {

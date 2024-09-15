@@ -59,7 +59,7 @@ $(document).ready(function () {
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
-            document.title = "Portfolio | Jigar Sable";
+            document.title = "Portfolio | Mansi Patel";
             $("#favicon").attr("href", "assets/images/favicon.png");
         }
         else {
@@ -171,7 +171,7 @@ VanillaTilt.init(document.querySelectorAll(".tilt"), {
 // window.onload = fadeOut;
 // pre loader end
 
-// disable developer mode
+// diPatel developer mode
 document.onkeydown = function (e) {
     if (e.keyCode == 123) {
         return false;
