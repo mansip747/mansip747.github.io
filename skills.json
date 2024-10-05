@@ -16,7 +16,7 @@
         "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
     },
     {
-        "name": "WordPress",
+        "name": "Looker",
         "icon": "https://img.icons8.com/color/48/000000/wordpress.png"
     },    
     {
@@ -26,5 +26,21 @@
     {
         "name": "Power BI",
         "icon":"https://img.icons8.com/?size=100&id=qYfwpsRXEcpc&format=png&color=000000"
+    }
+    {
+        "name": "JIRA",
+        "icon":"https://img.icons8.com/?size=100&id=oROcPah5ues6&format=png&color=000000"
+    },
+    {
+        "name": "Notion",
+        "icon":"https://img.icons8.com/?size=100&id=lsDwPKu9v0gn&format=png&color=000000"
+    },
+    {
+        "name": "Machine Learning",
+        "icon":"https://img.icons8.com/?size=100&id=FkrcURDZGsm4&format=png&color=000000"
+    }
+    {
+        "name": "Microsoft Excel",
+        "icon":"https://img.icons8.com/?size=100&id=117561&format=png&color=000000"
     }
 ]
