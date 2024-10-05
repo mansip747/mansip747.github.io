@@ -378,16 +378,16 @@ header .navbar ul li a:hover {
 }
 .about .row .content h3 {
   color: rgb(27, 27, 27);
-  font-size: 2.5rem;
+  font-size: 5rem;
 }
 .about .row .content .tag {
-  font-size: 1.4rem;
+  font-size: 2.4rem;
   color: #020133;
   font-weight: 600;
   margin-top: 1rem;
 }
 .about .row .content p {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-top: 1.5rem;
   font-family: "Nunito";
   font-weight: 600;
