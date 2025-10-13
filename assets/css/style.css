@@ -74,7 +74,7 @@ header {
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
 }
 section {
-  min-height: 100vh;
+  min-height: 50vh !important;
   padding: 2rem 9%;
 }
 .heading {
@@ -675,7 +675,6 @@ header .navbar ul li a:hover {
   background: none; /* Remove background effect */
 }
 
-
 .projects .box-container .box .tag {
   background: none; /* Remove background color for tag */
   padding-left: 0; /* Align title to the left */
@@ -717,14 +716,14 @@ header .navbar ul li a:hover {
 
 .projects .box-container .box .tag h3 {
   font-size: 2.5rem; /* Increase the font size of the project title */
-  font-weight: 700;  /* Make the font bold */
-  color: #000;       /* Ensure it's a clear, readable color */
+  font-weight: 700; /* Make the font bold */
+  color: #000; /* Ensure it's a clear, readable color */
   margin-bottom: 1rem; /* Add some space below the title */
 }
 
 .projects .desc p {
   font-size: 1.6rem; /* Adjust the font size of the description text */
-  color: #333;       /* Ensure the description text is readable */
+  color: #333; /* Ensure the description text is readable */
 }
 
 .projects .viewall {
@@ -855,22 +854,22 @@ header .navbar ul li a:hover {
 /* Increase the text size of the job titles */
 .experience .content .desc h3 {
   font-size: 2.2rem; /* Increase job title font size */
-  font-weight: 700;  /* Make the job titles bold */
-  color: #000;       /* Set a readable color */
+  font-weight: 700; /* Make the job titles bold */
+  color: #000; /* Set a readable color */
   margin-bottom: 1rem; /* Add space below the title */
 }
 
 /* Increase the text size of the company name */
 .experience .content .tag h2 {
-  font-size: 2rem;    /* Increase company name font size */
-  font-weight: 600;   /* Make the company name slightly bold */
-  color: #333;        /* Set a readable color */
+  font-size: 2rem; /* Increase company name font size */
+  font-weight: 600; /* Make the company name slightly bold */
+  color: #333; /* Set a readable color */
 }
 
 /* Increase the text size of the description */
 .experience .content .desc p {
-  font-size: 1.6rem;  /* Increase the font size of the description */
-  color: #333;        /* Set a readable color for the description */
+  font-size: 1.6rem; /* Increase the font size of the description */
+  color: #333; /* Set a readable color for the description */
   margin-bottom: 0.5rem; /* Add space between paragraphs */
 }
 

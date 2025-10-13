@@ -1,0 +1,335 @@
+/* /css/blogsCarousel.css */
+:root {
+  --pc-gap: 2rem;
+  --pc-card-radius: 20px;
+  --pc-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  --pc-accent: #6366f1;
+  --pc-bg: #ffffff;
+  --pc-text: #1f2937;
+}
+
+.blogs-section {
+  max-width: 1700px;
+  margin: 0 10px;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+/* Main carousel wrapper */
+.blogs-carousel {
+  position: relative;
+  width: 100%;
+}
+
+/* Arrow buttons positioned absolutely */
+.pc-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  appearance: none;
+  border: none;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--pc-text);
+  backdrop-filter: blur(10px);
+}
+
+.pc-arrow--left {
+  left: -28px;
+}
+
+.pc-arrow--right {
+  right: -28px;
+}
+
+.pc-arrow:hover:not(:disabled) {
+  background: var(--pc-accent);
+  color: white;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 30px rgba(99, 102, 241, 0.4);
+}
+
+.pc-arrow:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+/* Viewport - the overflow container */
+.pc-viewport {
+  overflow: hidden;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+/* Track - the sliding container */
+.pc-track {
+  display: flex !important;
+  gap: var(--pc-gap);
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  
+}
+
+/* Individual blog card */
+.pc-card {
+  flex: 0 0 calc(33.333% - (var(--pc-gap) * 2 / 3));
+  list-style: none !important;
+  min-height: 220px;
+}
+
+.pc-card .box {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--pc-bg);
+  border-radius: var(--pc-card-radius);
+  box-shadow: var(--pc-shadow);
+  overflow: hidden;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.pc-card .box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Large image at the top */
+.pc-card__img {
+  width: 130%;
+  height: 220px;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+  transition: transform 0.4s ease;
+}
+
+.pc-card .box:hover .pc-card__img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .pc-card {
+    flex: 0 0 calc(50% - (var(--pc-gap) / 2));
+    min-height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pc-card {
+    flex: 0 0 100%;
+    min-height: 100px;
+  }
+
+  .pc-card__img {
+    height: 50px;
+  }
+}
+
+/* Content area */
+.box .content {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  /* flex-grow: 1; */
+  /* gap: 1rem; */
+}
+
+.box .tag h3 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin: 0;
+  color: var(--pc-text);
+  font-weight: 700;
+}
+
+.box .desc {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  flex-grow: 1;
+}
+
+.box .desc p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Buttons */
+.btns {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.btns .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: var(--pc-accent);
+  color: white;
+}
+
+.btns .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+.btns .btn:last-child {
+  background: transparent;
+  color: var(--pc-accent);
+  border-color: var(--pc-accent);
+}
+
+.btns .btn:last-child:hover {
+  background: var(--pc-accent);
+  color: white;
+}
+
+/* Overlay modal */
+.pc-no-scroll {
+  overflow: hidden;
+}
+
+.pc-overlay[hidden] {
+  display: none !important;
+}
+
+.pc-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.pc-overlay__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+}
+
+.pc-overlay__content {
+  position: absolute;
+  inset: 3%;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.pc-overlay__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.pc-overlay__close:hover {
+  background: var(--pc-accent);
+  color: white;
+  transform: rotate(90deg);
+}
+
+.pc-overlay__iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .pc-arrow--left {
+    left: 0;
+  }
+  .pc-arrow--right {
+    right: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .pc-card {
+    flex: 0 0 100%;
+  }
+
+  .pc-arrow {
+    width: 48px;
+    height: 48px;
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --pc-gap: 1.5rem;
+  }
+
+  .blogs-section {
+    padding: 2rem 1rem;
+  }
+
+  .pc-card {
+    min-height: 450px;
+  }
+
+  .pc-card__img {
+    height: 220px;
+  }
+
+  .box .content {
+    padding: 1.5rem;
+  }
+
+  .box .tag h3 {
+    font-size: 1.25rem;
+  }
+
+  .pc-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  .btns {
+    flex-direction: column;
+  }
+}
