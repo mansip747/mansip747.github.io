@@ -1,0 +1,80 @@
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.lock
+*.swp
+*.idea
+
+# Ansible specific files #
+##########################
+*.pyc
+ansible*.cfg
+.ansible*.cfg
+rhn.ini
+ini/ec2*.ini
+xen.ini
+sensu.ini
+foreman.ini
+observium.ini
+jenkins.ini
+*.retry
+
+# Molecule
+.molecule/
+.cache
+.molecule
+.tox
+.vagrant
+molecule/*/.molecule
+tests/__pycache__
+
+# Python virtual envs
+env/*
+
+# Terraform Files #
+###################
+local.tfvars
+*.backup
+.terraform/
+.terraform.lock.hcl
+
+# Node #
+########
+
+# dependencies
+node_modules/
+.pnp
+.pnp.js
+*.env
+.vscode
+package-lock.json
+
+# testing
+coverage/
+
+# production
+build/
+dist/
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
