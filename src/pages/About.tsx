@@ -14,7 +14,7 @@ const About = () => {
             <div className="md:col-span-1">
               <div className="aspect-[3/4] bg-muted overflow-hidden sticky top-8">
                 <img
-                  src="/public/profilepicture2.jpeg"
+                  src="/profilepicture2.jpeg"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />

@@ -17,7 +17,7 @@ export const HeroSection = () => {
             <div className="flex items-center justify-center">
               <div className="w-64 h-80 bg-muted overflow-hidden">
                 <img
-                  src="/public/profilepicture.jpeg"
+                  src="/profilepicture.jpeg"
                   alt="Profile"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
                 />
