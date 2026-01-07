@@ -20,7 +20,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '24'
+        node-version: '20'
         
     - name: Install dependencies
       run: yarn  # or yarn install --frozen-lockfile
@@ -34,7 +34,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: './build'
+        path: './dist'
         
     - name: Deploy to GitHub Pages
       id: deployment
