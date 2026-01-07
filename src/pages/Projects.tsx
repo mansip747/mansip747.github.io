@@ -1,57 +1,7 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Highlight } from "@/components/ui/Highlight";
-
-const projects = [
-  {
-    id: 1,
-    title: "Brand Identity Design",
-    category: "Branding",
-    description: "Complete brand identity system for a tech startup including logo, color palette, typography, and brand guidelines.",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop",
-    year: "2024",
-  },
-  {
-    id: 2,
-    title: "Product Strategy",
-    category: "Product Management",
-    description: "Led product strategy for a SaaS platform, resulting in 40% increase in user engagement.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-    year: "2023",
-  },
-  {
-    id: 3,
-    title: "UX Research Study",
-    category: "Design Research",
-    description: "Comprehensive user research study informing the redesign of a mobile banking application.",
-    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&fit=crop",
-    year: "2023",
-  },
-  {
-    id: 4,
-    title: "E-commerce Platform",
-    category: "Product Design",
-    description: "End-to-end product design for a sustainable fashion marketplace.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
-    year: "2022",
-  },
-  {
-    id: 5,
-    title: "Marketing Campaign",
-    category: "Marketing",
-    description: "Integrated marketing campaign that increased brand awareness by 150%.",
-    image: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800&h=600&fit=crop",
-    year: "2022",
-  },
-  {
-    id: 6,
-    title: "Design System",
-    category: "Design Systems",
-    description: "Comprehensive design system for a enterprise software company.",
-    image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=800&h=600&fit=crop",
-    year: "2021",
-  },
-];
+import { allProjects } from "@/data/projects";
 
 const Projects = () => {
   return (
@@ -66,17 +16,17 @@ const Projects = () => {
           </p>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
+            {allProjects.map((project, index) => (
               <Link
                 key={project.id}
-                to={`/projects/${project.id}`}
+                to={`/projects/${project.slug}`}
                 className="group block animate-slide-up"
                 style={{ animationDelay: `${0.1 * index}s` }}
               >
                 <article>
                   <div className="aspect-[4/3] overflow-hidden bg-muted mb-4">
                     <img
-                      src={project.image}
+                      src={project.heroImage}
                       alt={project.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
@@ -86,14 +36,20 @@ const Projects = () => {
                       {project.category}
                     </span>
                     <span className="text-xs text-muted-foreground">
-                      {project.year}
+                      {project.readTime}
+                    </span>
+                    <span className="text-xs text-muted-foreground">
+                      {new Date(project.publishDate).toLocaleDateString('en-US', { 
+                        year: 'numeric', 
+                        month: 'short' 
+                      })}
                     </span>
                   </div>
                   <h2 className="font-serif text-2xl mb-2 group-hover:underline">
                     {project.title}
                   </h2>
                   <p className="text-muted-foreground">
-                    {project.description}
+                    {project.shortDescription}
                   </p>
                 </article>
               </Link>

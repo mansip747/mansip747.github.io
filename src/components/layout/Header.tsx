@@ -13,7 +13,7 @@ export const Header = () => {
   const location = useLocation();
 
   return (
-    <header className="w-full border-b border-border">
+    <header className="w-full border-b border-foreground">
       <div className="max-w-6xl mx-auto px-6 py-6">
         <div className="text-center mb-4">
           <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-2">
@@ -27,7 +27,7 @@ export const Header = () => {
         </div>
       </div>
       
-      <nav className="border-t border-border">
+      <nav className="border-t border-foreground">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex items-center justify-center">
             <ul className="flex items-center">
@@ -44,7 +44,7 @@ export const Header = () => {
                     {item.name}
                   </Link>
                   {index < navItems.length - 1 && (
-                    <span className="w-px h-4 bg-border" />
+                    <span className="w-px h-4 bg-foreground" />
                   )}
                 </li>
               ))}
