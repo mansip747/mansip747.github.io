@@ -1,23 +1,34 @@
 export const project1 = {
     id: 1,
     slug: "ai-powered-learning-platform",
-    title: "AI-Powered Learning Platform",
+    title: "Quint The AI Powered Voice Summarizer",
     category: "Product Management",
-    shortDescription: "Led the development of an adaptive learning platform using AI to personalize student experiences.",
-    publishDate: "2024-01-15",
-    readTime: "8 min read",
+    shortDescription: "Developed a voice-driven AI Tool that transcribes action items after summarizing spoken notes using speech recognition and LLMS",
+    publishDate: "2025-12-22",
+    readTime: "5 min read",
     heroImage: "/projects/learning-platform-hero.jpg",
     
     // Full project content
     overview: `
-      This project involved building an AI-powered adaptive learning platform from the ground up. 
-      The goal was to create a personalized learning experience that adjusts to each student's pace and style.
+      Stop drowning in meeting notes. Record voice, get a summary, and let AI execute your follow-up tasks instantly.
     `,
     
     challenge: `
-      Traditional learning platforms offered a one-size-fits-all approach. We needed to create 
-      a system that could dynamically adjust content difficulty and presentation based on real-time 
-      student performance data.
+      We have all been there. You just finished a high-energy brainstorming session or a critical client call. The ideas were flowing, 
+      decisions were made, and the path forward seemed clear.
+      
+      Then, the call ends.
+      
+      Suddenly, the momentum dies. You are left staring at a blank screen, trying to decipher your own scribbles. Who promised to send the Q3 report? Did 
+      we decide on a budget? And wait—didn't I say I would draft that intro email to the new colleague?
+      
+      The truth is, the most valuable part of any meeting—the action items—is often the first thing to get lost in the noise.
+
+      Enter Quint.
+
+      Quint is a modern web application that bridges the gap between talking about work and doing the work. It is an intelligent voice summarizer 
+      that doesn't just listen—it acts.
+
     `,
     
     solution: `
