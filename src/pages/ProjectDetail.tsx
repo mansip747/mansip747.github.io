@@ -2,7 +2,6 @@ import { useParams, Navigate, useNavigate } from "react-router-dom";
 import { ArrowLeft, ArrowUp } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Layout } from "@/components/layout/Layout";
-import { Highlight } from "@/components/ui/Highlight";
 import { getProjectBySlug } from "@/data/projects";
 
 const ProjectDetail = () => {
@@ -10,20 +9,16 @@ const ProjectDetail = () => {
   const navigate = useNavigate();
   const project = slug ? getProjectBySlug(slug) : null;
   
-  // Scroll to top button state
   const [showScrollTop, setShowScrollTop] = useState(false);
 
-  // Show/hide scroll to top button based on scroll position
   useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 400);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Scroll to top function
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -69,7 +64,7 @@ const ProjectDetail = () => {
           </div>
 
           {/* Hero Image */}
-          <div className="aspect-video overflow-hidden bg-muted mb-12">
+          <div className="overflow-hidden bg-muted mb-12">
             <img
               src={project.heroImage}
               alt={project.title}
@@ -77,73 +72,70 @@ const ProjectDetail = () => {
             />
           </div>
 
-          {/* Content Sections */}
+          {/* Dynamic Content Sections */}
           <div className="prose prose-lg max-w-none space-y-12">
-            <section>
-              <h2 className="section-title">Overview</h2>
-              <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
-                {project.overview}
-              </p>
-            </section>
-
-            <section>
-              <h2 className="section-title">The Challenge</h2>
-              <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
-                {project.challenge}
-              </p>
-            </section>
-
-            <section>
-              <h2 className="section-title">The Solution</h2>
-              <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
-                {project.solution}
-              </p>
-            </section>
-
-            {/* Project Images */}
-            {project.images && project.images.length > 0 && (
-              <section className="space-y-8">
-                {project.images.map((image, index) => (
-                  <figure key={index}>
-                    <div className="aspect-video overflow-hidden bg-muted mb-3">
+            {project.sections?.map((section: any, index: number) => (
+              <section key={index}>
+                <h2 className="section-title">{section.title}</h2>
+                
+                <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
+                  {section.content}
+                </p>
+                
+                {section.image && (
+                  <figure className="my-8">
+                    <div className="overflow-hidden bg-muted mb-3 rounded-lg max-w-3xl mx-auto">
                       <img
-                        src={image.url}
-                        alt={image.caption}
+                        src={section.image.url}
+                        alt={section.image.caption}
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <figcaption className="text-sm text-muted-foreground text-center">
-                      {image.caption}
+                    <figcaption className="text-sm text-muted-foreground text-center italic">
+                      {section.image.caption}
                     </figcaption>
                   </figure>
-                ))}
+                )}
+                
+                {section.additionalContent && (
+                  <p className="text-muted-foreground leading-relaxed whitespace-pre-line mt-6">
+                    {section.additionalContent}
+                  </p>
+                )}
+              </section>
+            ))}
+
+            {/* My Role */}
+            {project.myRole && (
+              <section>
+                <h2 className="section-title">My Role</h2>
+                <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
+                  {project.myRole}
+                </p>
               </section>
             )}
 
-            <section>
-              <h2 className="section-title">My Role</h2>
-              <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
-                {project.myRole}
-              </p>
-            </section>
+            {/* Impact */}
+            {project.impact && project.impact.length > 0 && (
+              <section>
+                <h2 className="section-title">Impact</h2>
+                <ul className="space-y-3">
+                  {project.impact.map((item: string, index: number) => (
+                    <li key={index} className="flex items-start">
+                      <span className="text-highlight mr-3">→</span>
+                      <span className="text-muted-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
 
-            <section>
-              <h2 className="section-title">Impact</h2>
-              <ul className="space-y-3">
-                {project.impact.map((item, index) => (
-                  <li key={index} className="flex items-start">
-                    <span className="text-highlight mr-3">→</span>
-                    <span className="text-muted-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </section>
-
+            {/* Technologies */}
             {project.technologies && (
               <section>
                 <h2 className="section-title">Technologies Used</h2>
                 <div className="flex flex-wrap gap-3">
-                  {project.technologies.map((tech) => (
+                  {project.technologies.map((tech: string) => (
                     <span
                       key={tech}
                       className="px-4 py-2 border border-border text-sm hover:bg-highlight hover:border-highlight transition-colors"
@@ -155,6 +147,7 @@ const ProjectDetail = () => {
               </section>
             )}
 
+            {/* Testimonial */}
             {project.testimonial && (
               <section className="border-l-4 border-highlight pl-6 py-4">
                 <blockquote className="text-xl font-serif mb-4">

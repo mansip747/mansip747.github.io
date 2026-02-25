@@ -12,7 +12,7 @@ const About = () => {
           
           <div className="grid md:grid-cols-3 gap-12">
             <div className="md:col-span-1">
-              <div className="aspect-[3/4] bg-muted overflow-hidden sticky top-8">
+              <div className="bg-muted overflow-hidden sticky top-8">
                 <img
                   src="/profilepicture2.jpeg"
                   alt="Profile"

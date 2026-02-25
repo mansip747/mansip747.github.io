@@ -3,7 +3,7 @@ import { Linkedin, Instagram, Mail } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="border-t border-border py-12">
+    <footer className="border-t border-foreground py-12">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">

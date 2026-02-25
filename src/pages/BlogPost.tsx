@@ -1,7 +1,7 @@
 import { useParams, Navigate, useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
-import { getBlogById } from "@/data/blogs";
+import { getBlogById } from "../data/blogs"; 
 
 const BlogPost = () => {
   const { id } = useParams<{ id: string }>();
@@ -37,7 +37,7 @@ const BlogPost = () => {
             </h1>
           </div>
 
-          <div className="aspect-video overflow-hidden bg-muted mb-12">
+          <div className="overflow-hidden bg-muted mb-12">
             <img
               src={post.image}
               alt={post.title}

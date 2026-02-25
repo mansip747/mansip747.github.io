@@ -15,14 +15,44 @@ const Contact = () => {
     subject: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xojwjwlk", {  // https://formspree.io/forms/xojwjwlk/integration
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again or email me directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -50,42 +80,42 @@ const Contact = () => {
               
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 border border-border flex items-center justify-center">
+                  <div className="w-12 h-12 border border-foreground flex items-center justify-center">
                     <Mail size={20} />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <a href="mailto:hello@example.com" className="hover:underline">
+                    <a href="mailto:mansip747@gmail.com" className="hover:underline">
                       mansip747@gmail.com
                     </a>
                   </div>
                 </div>
                 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 border border-border flex items-center justify-center">
+                  <div className="w-12 h-12 border border-foreground flex items-center justify-center">
                     <Linkedin size={20} />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">LinkedIn</p>
                     <a
-                      href="https://linkedin.com"
+                      href="https://linkedin.com/in/mansi747"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:underline"
                     >
-                      www.linkedin.com/in/mansi747
+                      linkedin.com/in/mansi747
                     </a>
                   </div>
                 </div>
                 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 border border-border flex items-center justify-center">
+                  <div className="w-12 h-12 border border-foreground flex items-center justify-center">
                     <Instagram size={20} />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Instagram</p>
                     <a
-                      href="https://instagram.com"
+                      href="https://instagram.com/mansiip_"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:underline"
@@ -96,7 +126,7 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 border border-border flex items-center justify-center">
+                  <div className="w-12 h-12 border border-foreground flex items-center justify-center">
                     <MapPin size={20} />
                   </div>
                   <div>
@@ -119,6 +149,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
+                    disabled={isSubmitting}
                     className="border-border focus:border-highlight focus:ring-highlight"
                   />
                 </div>
@@ -134,6 +165,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
+                    disabled={isSubmitting}
                     className="border-border focus:border-highlight focus:ring-highlight"
                   />
                 </div>
@@ -148,6 +180,7 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
+                    disabled={isSubmitting}
                     className="border-border focus:border-highlight focus:ring-highlight"
                   />
                 </div>
@@ -162,6 +195,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     required
+                    disabled={isSubmitting}
                     rows={6}
                     className="border-border focus:border-highlight focus:ring-highlight resize-none"
                   />
@@ -169,9 +203,10 @@ const Contact = () => {
                 
                 <Button
                   type="submit"
+                  disabled={isSubmitting}
                   className="w-full bg-foreground text-background hover:bg-foreground/90 py-6 text-sm tracking-[0.2em] uppercase"
                 >
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </div>

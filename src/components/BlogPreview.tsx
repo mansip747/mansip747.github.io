@@ -7,7 +7,7 @@ export const BlogPreview = () => {
   const featuredBlogs = allBlogs.slice(0, 2);
 
   return (
-    <section className="py-16 border-t border-border">
+    <section className="py-16 border-t border-foreground">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8">
           <div className="md:col-span-2">
@@ -25,7 +25,7 @@ export const BlogPreview = () => {
                       className="group block"
                     >
                       <article className="grid md:grid-cols-2 gap-6">
-                        <div className="aspect-[16/9] overflow-hidden bg-muted relative">
+                        <div className="verflow-hidden bg-muted relative">
                           <img
                             src={post.image}
                             alt={post.title}
@@ -64,7 +64,7 @@ export const BlogPreview = () => {
                     className="group block"
                   >
                     <article className="grid md:grid-cols-2 gap-6">
-                      <div className="aspect-[16/9] overflow-hidden bg-muted">
+                      <div className="overflow-hidden bg-muted max-w-xs mx-auto">
                         <img
                           src={post.image}
                           alt={post.title}
@@ -106,7 +106,7 @@ export const BlogPreview = () => {
             <h2 className="section-title mb-4">
               Currently <span className="bg-highlight px-1">Reading</span>
             </h2>
-            <div className="aspect-[3/4] bg-muted overflow-hidden">
+            <div className="bg-muted overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=300&h=400&fit=crop"
                 alt="Current book"

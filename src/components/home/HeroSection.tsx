@@ -4,14 +4,14 @@ import { Highlight } from "../ui/Highlight";
 
 export const HeroSection = () => {
   return (
-    <section className="py-16 md:py-24">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="relative border border-border">
-          <div className="absolute -top-4 left-8 bg-background px-4">
-            <h2 className="text-2xl md:text-3xl font-serif">
-              Hi, I'm <Highlight>Mansi</Highlight>
-            </h2>
-          </div>
+<section className="py-16 md:py-24">
+  <div className="max-w-6xl mx-auto px-6">
+    <div className="relative border border-foreground">  {/* Changed: border-2 back to border (1px) */}
+      <div className="absolute -top-4 left-8 bg-background px-4">
+        <h2 className="text-2xl md:text-3xl font-serif">
+          Hi, I'm <Highlight>Mansi</Highlight>
+        </h2>
+      </div>
           
           <div className="grid md:grid-cols-2 gap-8 p-8 pt-12">
             <div className="flex items-center justify-center">

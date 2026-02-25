@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 import { ExternalLink } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { Highlight } from "@/components/ui/Highlight";
-import { allBlogs } from "@/data/blogs";
+import { allBlogs } from "../data/blogs";  
 
 const Blog = () => {
   return (
     <Layout>
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24  border-t border-foreground">
         <div className="max-w-6xl mx-auto px-6">
           <h1 className="text-4xl md:text-5xl font-serif mb-4 animate-fade-in">
             <Highlight>Brain Dump</Highlight>
@@ -29,7 +29,7 @@ const Blog = () => {
                     style={{ animationDelay: `${0.1 * index}s` }}
                   >
                     <article>
-                      <div className="aspect-[16/9] overflow-hidden bg-muted mb-4 relative">
+                      <div className="overflow-hidden bg-muted mb-4 relative">
                         <img
                           src={post.image}
                           alt={post.title}
@@ -70,7 +70,7 @@ const Blog = () => {
                   style={{ animationDelay: `${0.1 * index}s` }}
                 >
                   <article>
-                    <div className="aspect-[16/9] overflow-hidden bg-muted mb-4">
+                    <div className="overflow-hidden bg-muted mb-4">
                       <img
                         src={post.image}
                         alt={post.title}
