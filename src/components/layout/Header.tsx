@@ -52,7 +52,7 @@ export const Header = () => {
             
             <div className="flex items-center gap-4 ml-8 border-l border-border pl-8">
               <a
-                href="https://linkedin.com/in/mansi747"
+                href="https://linkedin.com/in/maansii30"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground hover:text-muted-foreground transition-colors"
@@ -68,7 +68,7 @@ export const Header = () => {
                 <Instagram size={18} />
               </a>
               <a
-                href="mailto:mansip747@gmail.com"
+                href="mailto:maansip33@gmail.com"
                 className="text-foreground hover:text-muted-foreground transition-colors"
               >
                 <Mail size={18} />

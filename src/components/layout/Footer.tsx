@@ -17,7 +17,7 @@ export const Footer = () => {
           
           <div className="flex items-center gap-6">
             <a
-              href="https://linkedin.com/in/mansi747"
+              href="https://linkedin.com/in/maansii30"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground hover:text-muted-foreground transition-colors"
@@ -33,7 +33,7 @@ export const Footer = () => {
               <Instagram size={20} />
             </a>
             <a
-              href="mailto:mansip747@gmail.com"
+              href="mailto:maansiip33@gmail.com"
               className="text-foreground hover:text-muted-foreground transition-colors"
             >
               <Mail size={20} />
