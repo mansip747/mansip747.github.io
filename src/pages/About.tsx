@@ -7,7 +7,7 @@ const About = () => {
       <section className="py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-6">
           <h1 className="text-4xl md:text-5xl font-serif mb-12 animate-fade-in">
-            About <Highlight>Mansi</Highlight>
+            About <Highlight>Maansi</Highlight>
           </h1>
             
           <div className="md:col-span-2 space-y-8">

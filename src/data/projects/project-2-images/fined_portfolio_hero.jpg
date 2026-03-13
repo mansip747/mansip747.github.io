@@ -1,0 +1,298 @@
+<svg width="100%" viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="phoneClip1"><rect x="0" y="0" width="108" height="196" rx="12"/></clipPath>
+    <clipPath id="phoneClip2"><rect x="0" y="0" width="108" height="196" rx="12"/></clipPath>
+    <clipPath id="phoneClip3"><rect x="0" y="0" width="108" height="196" rx="12"/></clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="680" height="420" fill="#0A1628" rx="16"/>
+
+  <!-- Subtle grid lines -->
+  <line x1="0" y1="140" x2="680" y2="140" stroke="#1E3A5F" stroke-width="0.5"/>
+  <line x1="0" y1="280" x2="680" y2="280" stroke="#1E3A5F" stroke-width="0.5"/>
+  <line x1="170" y1="0" x2="170" y2="420" stroke="#1E3A5F" stroke-width="0.5"/>
+  <line x1="340" y1="0" x2="340" y2="420" stroke="#1E3A5F" stroke-width="0.5"/>
+  <line x1="510" y1="0" x2="510" y2="420" stroke="#1E3A5F" stroke-width="0.5"/>
+
+  <!-- Green accent bar left -->
+  <rect x="0" y="0" width="5" height="420" fill="#00D68F" rx="2"/>
+
+  <!-- === LEFT COLUMN: Project info === -->
+
+  <!-- Logo dots -->
+  <rect x="32" y="36" width="14" height="14" fill="#00D68F" rx="2"/>
+  <rect x="50" y="36" width="14" height="14" fill="#00D68F" rx="2"/>
+  <rect x="32" y="54" width="14" height="14" fill="#00D68F" rx="2"/>
+  <rect x="50" y="54" width="14" height="14" fill="#3A5070" rx="2"/>
+
+  <!-- FinEd wordmark -->
+  <text x="72" y="52" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#FFFFFF">Fin</text>
+  <text x="100" y="52" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#00D68F">Ed</text>
+
+  <text x="32" y="80" font-family="Arial, sans-serif" font-size="10" fill="#8A9BBE" letter-spacing="2">FINANCIAL LITERACY MADE SIMPLE</text>
+
+  <!-- Divider -->
+  <line x1="32" y1="96" x2="148" y2="96" stroke="#1E3A5F" stroke-width="1"/>
+
+  <!-- Role badge -->
+  <rect x="32" y="108" width="104" height="22" fill="#00D68F" rx="4"/>
+  <text x="84" y="123" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#0A1628" text-anchor="middle">PRODUCT MANAGER</text>
+
+  <!-- Meta info -->
+  <text x="32" y="152" font-family="Arial, sans-serif" font-size="9" fill="#8A9BBE">DURATION</text>
+  <text x="32" y="166" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">10 Months</text>
+
+  <text x="32" y="188" font-family="Arial, sans-serif" font-size="9" fill="#8A9BBE">TEAM SIZE</text>
+  <text x="32" y="202" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">7 Members</text>
+
+  <text x="32" y="224" font-family="Arial, sans-serif" font-size="9" fill="#8A9BBE">PLATFORM</text>
+  <text x="32" y="238" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">iOS · Web</text>
+
+  <text x="32" y="260" font-family="Arial, sans-serif" font-size="9" fill="#8A9BBE">TIMELINE</text>
+  <text x="32" y="274" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">June – Apr 2024</text>
+
+  <!-- Tags -->
+  <rect x="32" y="292" width="48" height="18" fill="#132645" rx="3" stroke="#3A5070" stroke-width="0.5"/>
+  <text x="56" y="305" font-family="Arial, sans-serif" font-size="8" fill="#8A9BBE" text-anchor="middle">EdTech</text>
+
+  <rect x="86" y="292" width="42" height="18" fill="#132645" rx="3" stroke="#3A5070" stroke-width="0.5"/>
+  <text x="107" y="305" font-family="Arial, sans-serif" font-size="8" fill="#8A9BBE" text-anchor="middle">Fintech</text>
+
+  <rect x="32" y="316" width="36" height="18" fill="#132645" rx="3" stroke="#3A5070" stroke-width="0.5"/>
+  <text x="50" y="329" font-family="Arial, sans-serif" font-size="8" fill="#8A9BBE" text-anchor="middle">AI/ML</text>
+
+  <rect x="74" y="316" width="62" height="18" fill="#132645" rx="3" stroke="#3A5070" stroke-width="0.5"/>
+  <text x="105" y="329" font-family="Arial, sans-serif" font-size="8" fill="#8A9BBE" text-anchor="middle">Freemium</text>
+
+  <!-- Case study label -->
+  <text x="32" y="376" font-family="Arial, sans-serif" font-size="9" fill="#8A9BBE">CASE STUDY</text>
+  <text x="32" y="392" font-family="Arial, sans-serif" font-size="11" fill="#00D68F">Product Case Study →</text>
+
+  <!-- === DIVIDER === -->
+  <line x1="170" y1="24" x2="170" y2="396" stroke="#1E3A5F" stroke-width="1"/>
+
+  <!-- === CENTER: Main headline + stats === -->
+
+  <text x="196" y="56" font-family="Georgia, serif" font-size="28" font-weight="700" fill="#FFFFFF">Financial literacy</text>
+  <text x="196" y="86" font-family="Georgia, serif" font-size="28" font-weight="700" fill="#00D68F">made simple.</text>
+  <text x="196" y="116" font-family="Arial, sans-serif" font-size="11" fill="#8A9BBE">A gamified, AI-powered financial education app</text>
+  <text x="196" y="132" font-family="Arial, sans-serif" font-size="11" fill="#8A9BBE">designed from research to shipped product.</text>
+
+  <!-- Stat cards row -->
+  <!-- Card 1 -->
+  <rect x="196" y="150" width="96" height="66" fill="#132645" rx="6" stroke="#1E3A5F" stroke-width="0.5"/>
+  <rect x="196" y="150" width="96" height="4" fill="#00D68F" rx="2"/>
+  <text x="244" y="186" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#00D68F" text-anchor="middle">60%</text>
+  <text x="244" y="202" font-family="Arial, sans-serif" font-size="8" fill="#8A9BBE" text-anchor="middle">Engagement lift</text>
+  <text x="244" y="212" font-family="Arial, sans-serif" font-size="8" fill="#8A9BBE" text-anchor="middle">via gamification</text>
+
+  <!-- Card 2 -->
+  <rect x="300" y="150" width="96" height="66" fill="#132645" rx="6" stroke="#1E3A5F" stroke-width="0.5"/>
+  <rect x="300" y="150" width="96" height="4" fill="#4A90D9" rx="2"/>
+  <text x="348" y="186" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#4A90D9" text-anchor="middle">40%</text>
+  <text x="348" y="202" font-family="Arial, sans-serif" font-size="8" fill="#8A9BBE" text-anchor="middle">Daily login</text>
+  <text x="348" y="212" font-family="Arial, sans-serif" font-size="8" fill="#8A9BBE" text-anchor="middle">increase</text>
+
+  <!-- Card 3 -->
+  <rect x="404" y="150" width="96" height="66" fill="#132645" rx="6" stroke="#1E3A5F" stroke-width="0.5"/>
+  <rect x="404" y="150" width="96" height="4" fill="#FFC947" rx="2"/>
+  <text x="452" y="186" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#FFC947" text-anchor="middle">2.5x</text>
+  <text x="452" y="202" font-family="Arial, sans-serif" font-size="8" fill="#8A9BBE" text-anchor="middle">Time-on-app</text>
+  <text x="452" y="212" font-family="Arial, sans-serif" font-size="8" fill="#8A9BBE" text-anchor="middle">news users</text>
+
+  <!-- Thin divider -->
+  <line x1="196" y1="234" x2="510" y2="234" stroke="#1E3A5F" stroke-width="0.5"/>
+
+  <!-- === THREE PHONE MOCKUPS === -->
+
+  <!-- Phone 1 -->
+  <g transform="translate(196, 248)">
+    <rect width="108" height="196" rx="12" fill="#0D1F3C" stroke="#3A5070" stroke-width="1"/>
+    <rect x="36" y="-2" width="36" height="8" rx="4" fill="#3A5070"/>
+    <!-- Screen content: Home dashboard -->
+    <rect x="6" y="10" width="96" height="176" rx="8" fill="#FFFFFF"/>
+    <!-- Status bar -->
+    <rect x="6" y="10" width="96" height="20" rx="8" fill="#132645"/>
+    <text x="14" y="23" font-family="Arial, sans-serif" font-size="6" fill="#8A9BBE">9:41</text>
+    <!-- Header -->
+    <rect x="6" y="28" width="96" height="22" fill="#0A1628"/>
+    <text x="14" y="42" font-family="Arial, sans-serif" font-size="7" font-weight="700" fill="#FFFFFF">Hello, Sophia</text>
+    <text x="14" y="51" font-family="Arial, sans-serif" font-size="6" fill="#8A9BBE">What do you want to learn?</text>
+    <!-- Level badge -->
+    <rect x="14" y="56" width="80" height="16" rx="8" fill="#132645" stroke="#3A5070" stroke-width="0.5"/>
+    <text x="35" y="67" font-family="Arial, sans-serif" font-size="6" fill="#FFFFFF">Beginner Level</text>
+    <rect x="86" y="58" width="8" height="8" rx="4" fill="#00D68F"/>
+    <!-- Progress ring placeholder -->
+    <circle cx="20" cy="62" r="5" fill="none" stroke="#3A5070" stroke-width="1.5"/>
+    <circle cx="20" cy="62" r="5" fill="none" stroke="#00D68F" stroke-width="1.5" stroke-dasharray="12 20" stroke-dashoffset="0"/>
+    <!-- News snaps -->
+    <text x="14" y="86" font-family="Arial, sans-serif" font-size="6" font-weight="700" fill="#FFFFFF">Financial Snaps</text>
+    <rect x="14" y="90" width="80" height="28" rx="4" fill="#132645"/>
+    <rect x="14" y="90" width="3" height="28" rx="2" fill="#00D68F"/>
+    <text x="21" y="101" font-family="Arial, sans-serif" font-size="5.5" fill="#FFFFFF">Market Moves: Damani</text>
+    <text x="21" y="110" font-family="Arial, sans-serif" font-size="5" fill="#8A9BBE">Cuts Stake in VST Industries</text>
+    <rect x="84" y="94" width="8" height="6" rx="1" fill="#4A90D9"/>
+    <!-- Hub posts -->
+    <text x="14" y="130" font-family="Arial, sans-serif" font-size="6" font-weight="700" fill="#FFFFFF">Popular Hub Posts</text>
+    <rect x="14" y="134" width="80" height="20" rx="4" fill="#132645"/>
+    <rect x="14" y="134" width="3" height="20" rx="2" fill="#4A90D9"/>
+    <text x="21" y="144" font-family="Arial, sans-serif" font-size="5.5" fill="#FFFFFF">Budgeting in a Nutshell</text>
+    <text x="21" y="152" font-family="Arial, sans-serif" font-size="5" fill="#8A9BBE">George D. · 1hr ago</text>
+    <!-- Bottom nav -->
+    <rect x="6" y="160" width="96" height="26" rx="0" fill="#0A1628"/>
+    <rect x="6" y="182" width="96" height="4" rx="0" fill="#0A1628"/>
+    <rect x="14" y="165" width="14" height="14" rx="3" fill="#00D68F" opacity="0.2"/>
+    <rect x="16" y="167" width="10" height="10" rx="2" fill="#00D68F"/>
+    <rect x="40" y="165" width="14" height="14" rx="3" fill="#132645"/>
+    <rect x="66" y="165" width="14" height="14" rx="3" fill="#132645"/>
+    <rect x="92" y="165" width="14" height="14" rx="3" fill="#132645"/>
+  </g>
+
+  <!-- Phone 2 - taller, centered/hero -->
+  <g transform="translate(316, 234)">
+    <rect width="108" height="210" rx="12" fill="#0D1F3C" stroke="#00D68F" stroke-width="1.5"/>
+    <rect x="36" y="-2" width="36" height="8" rx="4" fill="#3A5070"/>
+    <rect x="6" y="10" width="96" height="190" rx="8" fill="#FFFFFF"/>
+    <rect x="6" y="10" width="96" height="22" rx="8" fill="#132645"/>
+    <text x="14" y="24" font-family="Arial, sans-serif" font-size="6" fill="#8A9BBE">9:41</text>
+    <!-- Course page -->
+    <rect x="6" y="30" width="96" height="14" fill="#0A1628"/>
+    <text x="11" y="40" font-family="Arial, sans-serif" font-size="6" fill="#FFFFFF">← Intro to Financial Literacy</text>
+    <!-- XP + progress -->
+    <rect x="11" y="48" width="28" height="10" rx="5" fill="#00D68F" opacity="0.2" stroke="#00D68F" stroke-width="0.5"/>
+    <text x="25" y="56" font-family="Arial, sans-serif" font-size="6" fill="#00D68F" text-anchor="middle">250 XP</text>
+    <rect x="42" y="48" width="18" height="10" rx="5" fill="#132645"/>
+    <text x="51" y="56" font-family="Arial, sans-serif" font-size="6" fill="#8A9BBE" text-anchor="middle">10%</text>
+    <!-- Sub-topics -->
+    <text x="11" y="72" font-family="Arial, sans-serif" font-size="6.5" font-weight="700" fill="#0A1628">10 SubTopics</text>
+    <!-- Topic rows -->
+    <rect x="11" y="78" width="86" height="22" rx="4" fill="#F0F4FA"/>
+    <rect x="11" y="78" width="3" height="22" rx="2" fill="#00D68F"/>
+    <rect x="16" y="81" width="16" height="16" rx="3" fill="#00D68F" opacity="0.2"/>
+    <text x="36" y="88" font-family="Arial, sans-serif" font-size="6" fill="#0A1628" font-weight="700">Definition and Importance</text>
+    <text x="36" y="96" font-family="Arial, sans-serif" font-size="5" fill="#8A9BBE">XP Earned: 180</text>
+    <circle cx="92" cy="89" r="5" fill="#00D68F" opacity="0.3"/>
+    <text x="92" y="92" font-family="Arial, sans-serif" font-size="7" fill="#00D68F" text-anchor="middle">✓</text>
+
+    <rect x="11" y="104" width="86" height="22" rx="4" fill="#F0F4FA"/>
+    <rect x="11" y="104" width="3" height="22" rx="2" fill="#4A90D9"/>
+    <rect x="16" y="107" width="16" height="16" rx="3" fill="#4A90D9" opacity="0.2"/>
+    <text x="36" y="114" font-family="Arial, sans-serif" font-size="6" fill="#0A1628" font-weight="700">Basic Financial Terms</text>
+    <text x="36" y="122" font-family="Arial, sans-serif" font-size="5" fill="#8A9BBE">XP Earned: 300</text>
+    <circle cx="92" cy="115" r="5" fill="#4A90D9" opacity="0.3"/>
+    <text x="92" y="118" font-family="Arial, sans-serif" font-size="7" fill="#4A90D9" text-anchor="middle">✓</text>
+
+    <rect x="11" y="130" width="86" height="22" rx="4" fill="#F0F4FA"/>
+    <rect x="11" y="130" width="3" height="22" rx="2" fill="#FFC947"/>
+    <rect x="16" y="133" width="16" height="16" rx="3" fill="#FFC947" opacity="0.2"/>
+    <text x="36" y="140" font-family="Arial, sans-serif" font-size="6" fill="#0A1628" font-weight="700">Setting Financial Goals</text>
+    <text x="36" y="148" font-family="Arial, sans-serif" font-size="5" fill="#8A9BBE">In progress</text>
+    <rect x="11" y="154" width="86" height="3" rx="2" fill="#E8E8E8"/>
+    <rect x="11" y="154" width="28" height="3" rx="2" fill="#FFC947"/>
+
+    <rect x="11" y="160" width="86" height="22" rx="4" fill="#F8F8F8"/>
+    <rect x="11" y="160" width="3" height="22" rx="2" fill="#C8C8C8"/>
+    <text x="36" y="170" font-family="Arial, sans-serif" font-size="6" fill="#AAAAAA">Income and Expenses</text>
+    <text x="36" y="178" font-family="Arial, sans-serif" font-size="5" fill="#CCCCCC">Locked</text>
+
+    <!-- Nav -->
+    <rect x="6" y="186" width="96" height="14" rx="0" fill="#0A1628"/>
+    <rect x="14" y="188" width="10" height="10" rx="2" fill="#00D68F"/>
+    <rect x="40" y="188" width="10" height="10" rx="2" fill="#3A5070"/>
+    <rect x="66" y="188" width="10" height="10" rx="2" fill="#3A5070"/>
+    <rect x="92" y="188" width="10" height="10" rx="2" fill="#3A5070"/>
+  </g>
+
+  <!-- Phone 3 -->
+  <g transform="translate(436, 248)">
+    <rect width="108" height="196" rx="12" fill="#0D1F3C" stroke="#3A5070" stroke-width="1"/>
+    <rect x="36" y="-2" width="36" height="8" rx="4" fill="#3A5070"/>
+    <rect x="6" y="10" width="96" height="176" rx="8" fill="#FFFFFF"/>
+    <rect x="6" y="10" width="96" height="20" rx="8" fill="#132645"/>
+    <text x="14" y="23" font-family="Arial, sans-serif" font-size="6" fill="#8A9BBE">9:41</text>
+    <!-- Quiz: Smart Audit -->
+    <rect x="6" y="28" width="96" height="16" fill="#0A1628"/>
+    <text x="54" y="39" font-family="Arial, sans-serif" font-size="7" font-weight="700" fill="#FFFFFF" text-anchor="middle">Smart Audit</text>
+    <!-- Question -->
+    <rect x="11" y="50" width="86" height="36" rx="4" fill="#F0F4FA"/>
+    <text x="54" y="62" font-family="Arial, sans-serif" font-size="6" fill="#0A1628" text-anchor="middle" font-weight="700">Multiple Choice</text>
+    <text x="54" y="72" font-family="Arial, sans-serif" font-size="5.5" fill="#3A5070" text-anchor="middle">Which is an example</text>
+    <text x="54" y="80" font-family="Arial, sans-serif" font-size="5.5" fill="#3A5070" text-anchor="middle">of an expense?</text>
+    <!-- Answer options -->
+    <rect x="11" y="92" width="86" height="14" rx="3" fill="#F0F4FA" stroke="#E0E0E0" stroke-width="0.5"/>
+    <text x="54" y="102" font-family="Arial, sans-serif" font-size="6" fill="#8A9BBE" text-anchor="middle">Save $600 for a bicycle</text>
+    <rect x="11" y="110" width="86" height="14" rx="3" fill="#00D68F" opacity="0.15" stroke="#00D68F" stroke-width="1"/>
+    <text x="54" y="120" font-family="Arial, sans-serif" font-size="6" fill="#00D68F" text-anchor="middle" font-weight="700">✓ Interest earned</text>
+    <rect x="11" y="128" width="86" height="14" rx="3" fill="#F0F4FA" stroke="#E0E0E0" stroke-width="0.5"/>
+    <text x="54" y="138" font-family="Arial, sans-serif" font-size="6" fill="#8A9BBE" text-anchor="middle">Grocery bills</text>
+    <rect x="11" y="146" width="86" height="14" rx="3" fill="#F0F4FA" stroke="#E0E0E0" stroke-width="0.5"/>
+    <text x="54" y="156" font-family="Arial, sans-serif" font-size="6" fill="#8A9BBE" text-anchor="middle">Dividends</text>
+    <!-- CTA -->
+    <rect x="11" y="164" width="86" height="14" rx="3" fill="#00D68F"/>
+    <text x="54" y="174" font-family="Arial, sans-serif" font-size="7" font-weight="700" fill="#0A1628" text-anchor="middle">Check Answer</text>
+    <!-- Nav -->
+    <rect x="6" y="182" width="96" height="4" rx="0" fill="#0A1628"/>
+  </g>
+
+  <!-- Right column labels under phones -->
+  <text x="250" y="458" font-family="Arial, sans-serif" font-size="8" fill="#8A9BBE" text-anchor="middle">Home</text>
+  <text x="370" y="458" font-family="Arial, sans-serif" font-size="8" fill="#00D68F" text-anchor="middle">Learn</text>
+  <text x="490" y="458" font-family="Arial, sans-serif" font-size="8" fill="#8A9BBE" text-anchor="middle">Smart Audit</text>
+
+  <!-- === RIGHT COLUMN: Feature pills === -->
+  <line x1="510" y1="24" x2="510" y2="396" stroke="#1E3A5F" stroke-width="1"/>
+
+  <text x="526" y="52" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#FFFFFF">Key features</text>
+
+  <!-- Feature rows -->
+  <!-- F1 -->
+  <rect x="524" y="62" width="8" height="8" rx="2" fill="#00D68F"/>
+  <text x="538" y="71" font-family="Arial, sans-serif" font-size="9" fill="#FFFFFF">Adaptive Learning Paths</text>
+  <text x="538" y="83" font-family="Arial, sans-serif" font-size="8" fill="#8A9BBE">ML-driven personalization</text>
+  <!-- F2 -->
+  <rect x="524" y="96" width="8" height="8" rx="2" fill="#4A90D9"/>
+  <text x="538" y="105" font-family="Arial, sans-serif" font-size="9" fill="#FFFFFF">Gamification Engine</text>
+  <text x="538" y="117" font-family="Arial, sans-serif" font-size="8" fill="#8A9BBE">XP · Streaks · Leaderboards</text>
+  <!-- F3 -->
+  <rect x="524" y="130" width="8" height="8" rx="2" fill="#FFC947"/>
+  <text x="538" y="139" font-family="Arial, sans-serif" font-size="9" fill="#FFFFFF">Financial News Feed</text>
+  <text x="538" y="151" font-family="Arial, sans-serif" font-size="8" fill="#8A9BBE">Literacy-tailored content</text>
+  <!-- F4 -->
+  <rect x="524" y="164" width="8" height="8" rx="2" fill="#FF6B6B"/>
+  <text x="538" y="173" font-family="Arial, sans-serif" font-size="9" fill="#FFFFFF">AI Chat Tutor</text>
+  <text x="538" y="185" font-family="Arial, sans-serif" font-size="8" fill="#8A9BBE">On-demand financial help</text>
+  <!-- F5 -->
+  <rect x="524" y="198" width="8" height="8" rx="2" fill="#00B87A"/>
+  <text x="538" y="207" font-family="Arial, sans-serif" font-size="9" fill="#FFFFFF">Freemium Business Model</text>
+  <text x="538" y="219" font-family="Arial, sans-serif" font-size="8" fill="#8A9BBE">$9.99/mo premium tier</text>
+
+  <line x1="524" y1="234" x2="648" y2="234" stroke="#1E3A5F" stroke-width="0.5"/>
+
+  <text x="526" y="254" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#FFFFFF">Methodology</text>
+
+  <!-- Method chips -->
+  <rect x="524" y="262" width="54" height="16" rx="3" fill="#132645" stroke="#3A5070" stroke-width="0.5"/>
+  <text x="551" y="274" font-family="Arial, sans-serif" font-size="7.5" fill="#8A9BBE" text-anchor="middle">User Research</text>
+
+  <rect x="584" y="262" width="58" height="16" rx="3" fill="#132645" stroke="#3A5070" stroke-width="0.5"/>
+  <text x="613" y="274" font-family="Arial, sans-serif" font-size="7.5" fill="#8A9BBE" text-anchor="middle">Usability Testing</text>
+
+  <rect x="524" y="284" width="44" height="16" rx="3" fill="#132645" stroke="#3A5070" stroke-width="0.5"/>
+  <text x="546" y="296" font-family="Arial, sans-serif" font-size="7.5" fill="#8A9BBE" text-anchor="middle">SWOT / OKRs</text>
+
+  <rect x="574" y="284" width="48" height="16" rx="3" fill="#132645" stroke="#3A5070" stroke-width="0.5"/>
+  <text x="598" y="296" font-family="Arial, sans-serif" font-size="7.5" fill="#8A9BBE" text-anchor="middle">A/B Testing</text>
+
+  <rect x="524" y="306" width="42" height="16" rx="3" fill="#132645" stroke="#3A5070" stroke-width="0.5"/>
+  <text x="545" y="318" font-family="Arial, sans-serif" font-size="7.5" fill="#8A9BBE" text-anchor="middle">Roadmapping</text>
+
+  <line x1="524" y1="330" x2="648" y2="330" stroke="#1E3A5F" stroke-width="0.5"/>
+
+  <!-- Market size callout -->
+  <text x="526" y="350" font-family="Arial, sans-serif" font-size="9" fill="#8A9BBE">Market opportunity</text>
+  <text x="526" y="368" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">$11.8B</text>
+  <text x="526" y="382" font-family="Arial, sans-serif" font-size="8" fill="#8A9BBE">EdTech market by 2030</text>
+  <text x="526" y="394" font-family="Arial, sans-serif" font-size="8" fill="#00D68F">9.98% CAGR →</text>
+
+</svg>

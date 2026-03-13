@@ -29,7 +29,7 @@ export const HeroSection = () => {
                 I'm a <Highlight>product manager</Highlight>,{" "}
                 <Highlight>project manager</Highlight>,{" "}
                 <Highlight>business analyst</Highlight>, and I occasionally dabble in{" "}
-                <Highlight>marketing</Highlight>.
+                <Highlight>technical development stuff</Highlight>.
               </p>
               
               <p className="text-lg leading-relaxed">

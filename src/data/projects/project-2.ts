@@ -6,7 +6,7 @@ export const project2 = {
   shortDescription: "From Concept to Code: How We Built FinEd, the Future of Financial Literacy",
   publishDate: "2025-01-20",
   readTime: "6 min read",
-  heroImage: "/projects/fintech-hero.jpg",
+  heroImage: "/projects/fined_portfolio_hero.jpg",
   
   // Different sections for this project
   sections: [
