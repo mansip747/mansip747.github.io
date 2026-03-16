@@ -4,6 +4,10 @@ import { project3 } from "./project-3";
 import { project4 } from "./project-4";
 import { project5 } from "./project-5";
 import { project6 } from "./project-6";
+import { project7 } from "./project-7";
+import { project8 } from "./project-8";
+import { project9 } from "./project-9";
+import { project10 } from "./project-10";
 // Import more projects...
 
 // TypeScript Interfaces
@@ -41,6 +45,7 @@ export interface Project {
     label: string;
     url: string;
   };
+  caseStudy?: boolean;
 }
 
 export const allProjects: Project[] = [
@@ -50,6 +55,10 @@ export const allProjects: Project[] = [
   project4,
   project5,
   project6,
+  project7,
+  project8,
+  project9, 
+  project10,
   // Add more...
 ];
 

@@ -17,8 +17,7 @@ const Projects = () => {
           </p>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {allProjects.map((project, index) => {
-              // External project (Google Slides, etc.)
+            {allProjects.filter(p => !p.caseStudy).map((project, index) => {              // External project (Google Slides, etc.)
               if (project.type === "external" && project.externalUrl) {
                 return (
                   <a
