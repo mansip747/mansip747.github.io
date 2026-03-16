@@ -86,7 +86,7 @@ const Contact = () => {
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
                     <a href="mailto:mansip747@gmail.com" className="hover:underline">
-                      mansip747@gmail.com
+                      maansip33@gmail.com
                     </a>
                   </div>
                 </div>
@@ -103,7 +103,7 @@ const Contact = () => {
                       rel="noopener noreferrer"
                       className="hover:underline"
                     >
-                      linkedin.com/in/mansi747
+                      linkedin.com/in/maansii30
                     </a>
                   </div>
                 </div>

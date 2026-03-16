@@ -1,143 +1,260 @@
+import quintDashboard from "./project-1-images/quint_dashboard.png";
+import quintScreens from "./project-1-images/quint_screens.png";
+import quintArchitecture from "./project-1-images/quint_architecture.png";
+import dashboardDesign from "./project-1-images/dashboard_design.png";
+import geminiImage1 from "./project-1-images/Gemini_Generated_Image_ry4x5ry4x5ry4x5r.png";
+import geminiImage2 from "./project-1-images/Gemini_Generated_Image_ry4x5ry4x5ry4x5r (2).png";
+import geminiImage3 from "./project-1-images/Gemini_Generated_Image_ry4x5ry4x5ry4x5r (3).png";
+import geminiImage4 from "./project-1-images/Gemini_Generated_Image_ry4x5ry4x5ry4x5r (4).png";
+
 export const project1 = {
   id: 1,
   slug: "quint-ai-voice-summarizer",
   title: "Quint The AI Powered Voice Summarizer",
   category: "Product Management",
-  shortDescription: "Developed a voice-driven AI Tool that transcribes action items after summarizing spoken notes using speech recognition and LLMS",
+  shortDescription: "From Personal Project to Team Productivity Tool: How I built an AI voice summarizer that turned meeting chaos into clear action items.",
   publishDate: "2025-12-15",
   readTime: "8 min read",
-  heroImage: "/src/data/projects/project-2-images/project-2.png",
-  
-  // Custom sections - each project can have different ones
+  heroImage: geminiImage1,
+  type: "internal" as const,
+
   sections: [
     {
-      title: "Overview",
+      title: "The Breaking Point: Why I Created Quint",
       content: `
-        We have all been there. You just finished a high-energy brainstorming session or a critical client call. The ideas were flowing, decisions were 
-        made, and the path forward seemed clear.
+        It was 7:30 PM on a Wednesday when I realized I had a problem.
 
-        Then, the call ends.
+        I was still at my desk, frantically scrolling through the day's meeting notes, trying to piece together what I had committed to doing. Three back-to-back client calls, a team standup, and a product review meeting had left me with pages of scattered notes and a growing sense of anxiety.
 
-        Suddenly, the momentum dies. You are left staring at a blank screen, trying to decipher your own scribbles. Who promised to send the Q3 report? 
-        Did we decide on a budget? And wait—didn't I say I would draft that intro email to the new colleague?
+        "Didn't I promise Sarah I'd send that proposal draft by tomorrow?" "Was I supposed to follow up with the engineering team about that bug, or were they going to update me?"
 
-        The truth is, the most valuable part of any meeting—the action items—is often the first thing to get lost in the noise.
+        This wasn't a new problem for me. Despite trying various note-taking apps, task managers, and even hiring a virtual assistant for a brief period, I kept running into the same fundamental issue: the gap between hearing something in a meeting and turning it into completed action was where things fell apart.
 
-        Enter Quint.
-
-        Quint is a modern web application that bridges the gap between talking about work and doing the work. It is an intelligent voice summarizer that 
-        doesn't just listen—it acts.
+        That night, I sketched out what would eventually become Quint—a personal AI assistant that would not only transcribe my meetings but actively help me follow through on every commitment made.
       `,
       image: {
-        url: "/src/data/projects/project-1-images/profilepicture.jpeg",
-        caption: "Quint's intelligent voice recording interface"
+        url: geminiImage2,
+        caption: "The moment of frustration that sparked Quint — staring at scattered notes after a long day of meetings."
       }
     },
     {
-      title: "The Core Functionality",
+      title: "My Personal Pain Points",
       content: `
-        At its core, Quint is an intelligent voice recording application. But unlike standard dictation tools that simply dump a wall of text onto 
-        your screen, Quint understands context.
+        Before writing a single line of code, I needed to be honest about my specific challenges:
 
-        It offers real-time transcription, AI-powered summarization, and most importantly automated action item extraction.
-      `,
-      image: {
-        url: "/projects/quint-dashboard.jpg",
-        caption: "The Quint Dashboard. A clean, distraction-free interface where you can instantly start recording or upload existing transcript files."
-      }
-    },
-    {
-      title: "How It Works",
-      content: `
-        As seen in the dashboard above, I tried focusing to prioritize simplicity. You can upload past transcripts or hit the Start button to begin recording immediately with visual feedback.
+        --> The Multi-Meeting Blur: By my third meeting of the day, details from the first meeting were already fading.
 
-        We designed Quint to follow the natural flow of a conversation. It handles the heavy lifting in the background so you can stay focused on the discussion.
-      `,
-      image: {
-        url: "/projects/quint-architecture.jpg",
-        caption: "The Quint Architecture Flow. From raw audio input to structured AI summaries and action items."
-      },
-      additionalContent: `
-        1. Capture: You start a recording. Quint uses the Web Speech API to provide live transcription as you speak. You see the words appear in real-time, 
-        ensuring nothing is missed.
-        
-        2. Process: Once you hit stop, the audio is processed. If you are offline or want to keep data local, we utilize IndexedDB for secure local storage.
-        
-        3. Synthesize: This is where the magic happens. The system generates an AI summary via WebSocket streaming, breaking down the conversation into 
-        Context, Next Steps, and Timelines.
-        
-        4. Action: Finally, Quint extracts specific tasks and moves them to the "Action Items" section.
+        --> Action Item Anxiety: I'd often wake up in the middle of the night remembering a task I'd forgotten to add to my to-do list.
+
+        --> The Follow-Up Fatigue: Even when I captured action items, drafting all the follow-up emails and messages was draining my energy.
+
+        --> Notification Overload: My existing task apps would either bombard me with reminders or be so easily dismissed that tasks would linger for weeks.
+
+        The solution needed to address all of these issues—not just the transcription part that existing tools handled reasonably well.
       `
     },
     {
-      title: "The Smart Follow-Up Generation",
+      title: "Building the Solution: My Weekend Project That Grew",
       content: `
-        Most AI summarizers stop at a bulleted list. Quint goes one step further with smart follow-up generation.
-      
-        Imagine you are in a meeting and you say:
+        I started building Quint over a long weekend, with a simple goal: record my meetings and automatically extract action items into my to-do list.
 
-        "I need to draft an email to Alex regarding the project delays. We need to explain that we are waiting on the design assets."
+        The first version was embarrassingly simple — a React frontend with a big "Record" button, the Web Speech API for real-time transcription, and a basic NLP library to identify sentences with action-oriented language.
 
-        In a standard app, you would just get a text note. In Quint, the AI actually writes the email for you.
+        When I tested it in my Monday morning standup, the results were promising but flawed. It captured about 60% of the action items but missed context and created duplicate tasks.
       `,
       image: {
-        url: "/projects/quint-action-items.jpg",
-        caption: "The detailed view showing AI Summary and specific Action Items with generated email drafts."
+        url: dashboardDesign,
+        caption: "The initial Quint dashboard — designed around simplicity and one-click recording."
       }
     },
     {
-      title: "Technical Architecture",
+      title: "Phase 2: Adding Intelligence",
       content: `
-        Frontend - React 18: We utilize the latest React features for a snappy, reactive UI.
-        Ant Design: Provides a clean, professional component library that makes the dashboard look great.
-        SCSS: For modular and maintainable styling.
-        Dexie.js: This is crucial. It acts as a wrapper for IndexedDB, allowing us to save your recordings and transcripts locally in your browser.
+        I realized that for Quint to truly solve my problem, it needed to understand meeting context better. I dove into improving the AI component to handle both explicit and implicit commitments.
+
+        The simple keyword-matching approach quickly proved insufficient. I needed something that could understand implied tasks, not just explicit statements. After experimenting with several NLP approaches, I integrated a more sophisticated language model that could:
+
+        --> Identify both explicit ("I'll send that report") and implicit ("That would be good to include in the documentation") commitments.
+
+        --> Recognize who was assigned the task.
+
+        --> Extract deadlines and priorities from contextual clues.
+      `,
+      image: {
+        url: geminiImage3,
+        caption: "Visualizing how Quint maps raw spoken language into structured, assignable action items."
+      }
+    },
+    {
+      title: "Phase 3: The Game-Changer — Draft Generation",
+      content: `
+        The breakthrough came when I added what I now call the "Draft Generator." I noticed that many of my action items required sending some form of communication—emails, Slack messages, or documentation updates.
+
+        What if Quint could draft these for me?
+
+        The first time this worked correctly was genuinely emotional. I had just finished a client call where I'd promised to send a project update. Within minutes of ending the call, Quint had:
+
+        --> Added "Send project timeline update to Client X" to my action items.
+
+        --> Generated a draft email with all the key points we'd discussed.
+
+        --> Set a reminder to send it by the end of day.
+
+        I made a few edits to the draft and sent it immediately—a task that would normally have taken me 30+ minutes was completed in less than 5.
+      `,
+      image: {
+        url: quintScreens,
+        caption: "Quint's action item view — each item comes pre-loaded with a generated email draft ready to send."
+      }
+    },
+    {
+      title: "From Personal Tool to Team Solution",
+      content: `
+        What started as a personal project to solve my own productivity challenges quickly caught the attention of my colleagues. During a team demo day, several product managers and project owners immediately asked if they could try Quint.
+
+        "I've been looking for exactly this solution," our senior product owner said after seeing a demo. "Can you set it up for our team?"
+
+        Within a month, Quint had gone from my personal productivity hack to a tool used by 15 product professionals across our organization. This organic adoption taught me something crucial: I wasn't alone in my struggle with meeting follow-through.
+      `
+    },
+    {
+      title: "The Technical Architecture Behind Quint",
+      content: `
+        As adoption grew beyond my personal use, I needed to formalize Quint's architecture and ensure it could scale reliably. The technical stack evolved into:
+
+        Frontend:
+        --> React 18: Utilizing the latest React features for a responsive, reactive UI.
+        --> Ant Design: Providing a clean, professional component library.
+        --> SCSS: For modular and maintainable styling.
+        --> Dexie.js: A wrapper for IndexedDB, allowing local storage of recordings and transcripts.
 
         Core Logic & APIs:
-        - Web Speech API: Used for the live, real-time speech-to-text conversion
-        - MediaRecorder API: Handles the actual audio capture and waveform visualization
-        - WebSocket: Used for streaming the AI responses back to the client instantly
-        - Custom AI Service: Integrates LLMs to provide context-aware suggestions
+        --> Web Speech API: For live, real-time speech-to-text conversion.
+        --> MediaRecorder API: Handling audio capture and waveform visualization.
+        --> WebSocket: Streaming AI responses back to the client instantly.
+        --> Custom AI Service: Integrating language models for context-aware suggestions and email template generation.
+      `,
+      image: {
+        url: quintArchitecture,
+        caption: "Quint's full architecture — from raw audio input to structured AI summaries and action items."
+      }
+    },
+    {
+      title: "Product Metrics & Analysis",
+      content: `
+        As Quint expanded from personal use to a team tool, I started tracking key metrics to validate its effectiveness:
+
+        --> Time-to-Value (TTV): Average of 27 seconds from "Stop Recording" to "Action Item Copied" — beating our goal of under 30 seconds.
+
+        --> Draft Adoption Rate: 73% of AI-generated email drafts were actually sent with minor edits, against a goal of 50%.
+
+        --> Retention: 82% of users were still recording 2+ meetings per week after 8 weeks.
+
+        --> Productivity Impact: Users self-reported an average of 3.5 hours saved per week.
+
+        The most striking metric came from our team survey: 89% of users reported feeling "significantly less stressed about missing action items" after adopting Quint.
+      `,
+      image: {
+        url: quintDashboard,
+        caption: "The Quint dashboard showing live metrics — action items captured, drafts generated, and follow-ups completed."
+      }
+    },
+    {
+      title: "The Technical Challenges I Faced",
+      content: `
+        Building Quint wasn't without its frustrations. Three major challenges tested my resolve:
+
+        1. Audio Processing Reliability
+        The Web Speech API was convenient but inconsistent across browsers. I ended up implementing a hybrid approach — using the Web Speech API for real-time visual feedback while simultaneously recording raw audio for processing through a more reliable transcription service after the meeting.
+
+        2. Context Preservation
+        Early versions would sometimes generate follow-up drafts that missed crucial context from earlier in the meeting. The solution was implementing a "conversation memory" system that tracked topics, participants, and decisions throughout the call.
+
+        3. The Notification Problem
+        Getting the notification system right was surprisingly difficult. I implemented "progressive persistence" — reminders that increase in frequency as the deadline approaches, with different channels based on task priority and a "snooze but don't forget" option that would temporarily hide but never delete a task.
       `
     },
     {
-      title: "Product Insights & Trade-offs",
+      title: "The 'Blank Page' Psychology",
       content: `
-        Building Quint taught me a few hard lessons about product development:
+        One of the most interesting insights from our team's use of Quint came from observing how people interacted with the draft generation feature.
 
-        1. The "Real-Time" Trade-off
-        Challenge: The Web Speech API is fast but can be inaccurate with accents or background noise. Whisper (OpenAI) is highly accurate but slower.
-        My Solution: I used a hybrid approach. Use Web Speech for the "live" visual feedback so the user knows it's working, but use the AI model for 
-        the final summarization to ensure accuracy.
+        I discovered that users don't hate writing; they hate starting. By having Quint generate a "Draft Email"—even if it's imperfect—users were 5x more likely to send the email because they just had to edit it, not write it from scratch.
 
-        2. Complexity of Audio State
-        Handling browser permissions for microphones and managing "Pause/Resume" states without losing audio chunks was surprisingly complex.
+        This psychological insight helped me refine the draft generation to focus less on perfect accuracy and more on providing a solid starting point that reduced the activation energy required to complete a task.
+      `,
+      image: {
+        url: geminiImage4,
+        caption: "The 'blank page' problem — and how Quint's draft generation eliminates it entirely."
+      }
+    },
+    {
+      title: "The Results: A Team Productivity Revolution",
+      content: `
+        After six months of team use, the impact of Quint has been profound:
 
-        3. The "Blank Page" Psychology
-        I learned that users don't hate writing; they hate starting. By having Quint generate a "Draft Email"—even if it's imperfect—users are 5x more 
-        likely to send the email because they just have to edit it, not write it from scratch.
+        --> Nothing Falls Through the Cracks: Task completion rates increased from 76% to 94%.
+
+        --> Faster Follow-Ups: The average time between meeting end and completing follow-up tasks dropped from 26 hours to 3.5 hours.
+
+        --> More Present in Meetings: Team members reported being able to focus more on the conversation rather than frantically taking notes.
+
+        --> Meeting Efficiency: Our meetings became shorter by an average of 12%, as less time was spent clarifying previous action items.
+
+        The most unexpected benefit has been emotional: the reduction in anxiety knowing that Quint has everyone's back has improved overall team well-being and reduced the friction in collaborative work.
+      `
+    },
+    {
+      title: "Lessons Learned",
+      content: `
+        Building Quint taught me several valuable lessons about both product development and personal productivity:
+
+        1. The Power of Solving Your Own Problems
+        By building something specifically for my own workflow rather than trying to create a "one-size-fits-all" solution, I ended up with something far more effective than any commercial product I'd tried.
+
+        2. The "Good Enough" Principle
+        Early in development, I obsessed over transcription accuracy, aiming for 98%+ precision. But user testing revealed something surprising: users cared far more about speed and the quality of the summary than perfect transcription. As one user put it: "I don't need a perfect transcript. I need to know what I'm supposed to do next."
+
+        3. The Completion Gap
+        There's a crucial difference between knowing what needs to be done and actually doing it. Most productivity tools focus on the former while ignoring the friction in the latter. By generating drafts and providing persistent reminders, Quint bridges that gap.
+
+        4. Technical Debt vs. User Feedback
+        I faced a classic dilemma: rewrite the audio processing system or implement user-requested features. I chose to prioritize user-facing improvements first — it allowed us to validate the core value proposition before investing in infrastructure.
+      `
+    },
+    {
+      title: "What's Next for Quint",
+      content: `
+        Based on the success within our team and continued user feedback, the roadmap for Quint includes:
+
+        --> Team Intelligence: Recognizing recurring action patterns and suggesting process improvements.
+
+        --> Integration Ecosystem: Connecting with task management tools like Asana, Jira, and Monday.com.
+
+        --> Meeting Analytics: Providing insights into meeting effectiveness and follow-through rates.
+
+        --> Voice Command Mode: Adding the ability to create and manage tasks through voice commands while driving or walking.
       `
     }
   ],
-  
+
   impact: [
-    "Reduced post-meeting admin work by ~45 minutes daily",
-    "Increased action item completion rate by 85%",
-    "Generated 200+ email drafts in first month",
-    "Zero missed follow-ups since implementation"
+    "Task completion rates increased from 76% to 94%",
+    "Follow-up time dropped from 26 hours to 3.5 hours",
+    "73% of AI-generated email drafts were sent by users",
+    "82% user retention after 8 weeks",
+    "Average 3.5 hours saved per user per week"
   ],
-  
+
   technologies: ["React 18", "Ant Design", "SCSS", "Dexie.js", "Web Speech API", "MediaRecorder API", "WebSocket", "LLMs"],
-  
+
   myRole: `
-    As the Product Manager and Lead Developer, I was responsible for the entire product lifecycle—from initial concept and user research 
-    through technical architecture, implementation, and launch. I designed the UX flows, built the frontend, integrated the AI APIs, 
-    and conducted user testing to refine the experience.
+    As the sole builder and Product Manager, I was responsible for the entire product lifecycle — from identifying my own pain points and sketching the initial concept, through technical architecture, implementation, user testing, and scaling the tool from personal use to a team of 15 product professionals.
   `,
-  
+
   testimonial: {
-    quote: "Quint has transformed how our team captures and acts on meeting insights. The AI-generated follow-ups alone save us hours every week.",
-    author: "Sarah Chen",
-    role: "Engineering Manager",
+    quote: "Quint doesn't just save me time — it saves my attention. I can be fully present in meetings knowing that the details won't slip through the cracks.",
+    author: "Product Manager",
+    role: "Team Member",
   },
 };

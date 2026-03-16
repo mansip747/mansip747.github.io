@@ -36,6 +36,10 @@ export interface Project {
     quote: string;
     author: string;
     role: string;
+  },
+  paperLink?: {       
+    label: string;
+    url: string;
   };
 }
 
