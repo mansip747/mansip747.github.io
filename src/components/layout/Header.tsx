@@ -22,7 +22,7 @@ export const Header = () => {
           </p>
           <Link to="/" className="inline-block">
             <h1 className="text-5xl md:text-6xl font-serif font-normal tracking-tight">
-              maansi patel
+              mansi d. patel
             </h1>
           </Link>
         </div>

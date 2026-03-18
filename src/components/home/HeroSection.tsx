@@ -9,7 +9,7 @@ export const HeroSection = () => {
     <div className="relative border border-foreground">  {/* Changed: border-2 back to border (1px) */}
       <div className="absolute -top-4 left-8 bg-background px-4">
         <h2 className="text-2xl md:text-3xl font-serif">
-          Hi, I'm <Highlight>Maansi</Highlight>
+          Hi, I'm <Highlight>Mansi</Highlight>
         </h2>
       </div>
           
