@@ -69,7 +69,7 @@ export const Header = () => {
                 <Instagram size={18} />
               </a>
               <a
-                href="mailto:maansip33@gmail.com"
+                href="mailto:mansidpatel65@gmail.com"
                 className="text-foreground hover:text-muted-foreground transition-colors"
               >
                 <Mail size={18} />
