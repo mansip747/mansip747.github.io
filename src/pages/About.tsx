@@ -7,14 +7,14 @@ const About = () => {
       <section className="py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-6">
           <h1 className="text-4xl md:text-5xl font-serif mb-12 animate-fade-in">
-            About <Highlight>Maansi</Highlight>
+            About <Highlight>Maanasi</Highlight>
           </h1>
             
           <div className="md:col-span-2 space-y-8">
             <div className="animate-slide-up" style={{ animationDelay: "0.1s" }}>
               <h2 className="section-title mb-4">Background</h2>
               <p className="text-lg leading-relaxed text-muted-foreground mb-4">
-                  With over 5 years of experience in product management and business analysis, I've worked at startups and established companies 
+                  With over 3 years of experience in product management and business analysis, I've worked at startups and established companies 
                   creating meaningful products that users love. My background spans technology, analytics, and business strategy.</p>
                   
               <p className="text-lg leading-relaxed mb-4">I am a <Highlight>product manager</Highlight> with a background in analytics, front-end web development, and a little bit of product design. My 

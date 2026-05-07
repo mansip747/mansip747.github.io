@@ -9,7 +9,7 @@ export const HeroSection = () => {
     <div className="relative border border-foreground">  {/* Changed: border-2 back to border (1px) */}
       <div className="absolute -top-4 left-8 bg-background px-4">
         <h2 className="text-2xl md:text-3xl font-serif">
-          Hi, I'm <Highlight>Mansi</Highlight>
+          Hi, I'm <Highlight>Maanasi</Highlight>
         </h2>
       </div>
           
@@ -27,8 +27,8 @@ export const HeroSection = () => {
             <div className="flex flex-col justify-center space-y-6">
               <p className="text-lg leading-relaxed">
                 I'm a <Highlight>product manager</Highlight>,{" "}
-                <Highlight>project manager</Highlight>,{" "}
-                <Highlight>business analyst</Highlight>, and I occasionally dabble in{" "}
+                <Highlight>business analyst</Highlight>,{" "}
+                <Highlight>project manager</Highlight>, and I occasionally dabble in{" "}
                 <Highlight>technical development stuff</Highlight>.
               </p>
               
