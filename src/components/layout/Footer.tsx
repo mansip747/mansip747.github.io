@@ -8,7 +8,7 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
             <Link to="/" className="font-serif text-2xl">
-              Mansi
+              Maanasi
             </Link>
             <p className="text-sm text-muted-foreground mt-2">
               © {new Date().getFullYear()} All rights reserved.
@@ -33,7 +33,7 @@ export const Footer = () => {
               <Instagram size={20} />
             </a>
             <a
-              href="mailto:mansidpatel65@gmail.com"
+              href="mailto:patelmaanasi47@gmail.com"
               className="text-foreground hover:text-muted-foreground transition-colors"
             >
               <Mail size={20} />

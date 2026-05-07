@@ -22,7 +22,7 @@ export const Header = () => {
           </p>
           <Link to="/" className="inline-block">
             <h1 className="text-5xl md:text-6xl font-serif font-normal tracking-tight">
-              mansi divyesh patel
+              maanasi patel
             </h1>
           </Link>
         </div>
@@ -69,7 +69,7 @@ export const Header = () => {
                 <Instagram size={18} />
               </a>
               <a
-                href="mailto:mansidpatel65@gmail.com"
+                href="mailto:patelmaanasi47@gmail.com"
                 className="text-foreground hover:text-muted-foreground transition-colors"
               >
                 <Mail size={18} />
