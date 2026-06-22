@@ -66,7 +66,7 @@ const About = () => {
                     <p className="text-muted-foreground">Arizona State University • 2023 - 2024</p>
                   </div>
                   <div className="border-l-2 border-border pl-6">
-                    <h3 className="font-serif text-xl">Business Data Analyst</h3>
+                    <h3 className="font-serif text-xl">Software Developer</h3>
                     <p className="text-muted-foreground">Vrinsoft • 2020 - 2022</p>
                   </div>
                 </div>

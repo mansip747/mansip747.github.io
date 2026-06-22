@@ -27,8 +27,8 @@ export const HeroSection = () => {
             <div className="flex flex-col justify-center space-y-6">
               <p className="text-lg leading-relaxed">
                 I'm a <Highlight>product manager</Highlight>,{" "}
-                <Highlight>business analyst</Highlight>,{" "}
-                <Highlight>project manager</Highlight>, and I occasionally dabble in{" "}
+                <Highlight>product analyst</Highlight>,{" "}
+                <Highlight>project manager</Highlight>, and I dabble in{" "}
                 <Highlight>technical development stuff</Highlight>.
               </p>
               
