@@ -22,7 +22,7 @@ export const Header = () => {
           </p>
           <Link to="/" className="inline-block">
             <h1 className="text-5xl md:text-6xl font-serif font-normal tracking-tight">
-              maanasi patel
+              mansi 
             </h1>
           </Link>
         </div>
@@ -53,7 +53,7 @@ export const Header = () => {
             
             <div className="flex items-center gap-4 ml-8 border-l border-border pl-8">
               <a
-                href="https://linkedin.com/in/maansii30"
+                href="https://www.linkedin.com/in/maansii30"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground hover:text-muted-foreground transition-colors"
@@ -61,7 +61,7 @@ export const Header = () => {
                 <Linkedin size={18} />
               </a>
               <a
-                href="https://instagram.com/mansiip_"
+                href="https://instagram.com/aquietparadox"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground hover:text-muted-foreground transition-colors"
@@ -69,7 +69,7 @@ export const Header = () => {
                 <Instagram size={18} />
               </a>
               <a
-                href="mailto:patelmaanasi47@gmail.com"
+                href="mailto:mansip747@gmail.com"
                 className="text-foreground hover:text-muted-foreground transition-colors"
               >
                 <Mail size={18} />

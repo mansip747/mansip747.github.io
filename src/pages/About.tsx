@@ -7,7 +7,7 @@ const About = () => {
       <section className="py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-6">
           <h1 className="text-4xl md:text-5xl font-serif mb-12 animate-fade-in">
-            About <Highlight>Maanasi</Highlight>
+            About <Highlight>Mansi</Highlight>
           </h1>
             
           <div className="md:col-span-2 space-y-8">
@@ -55,7 +55,7 @@ const About = () => {
                 <div className="space-y-6">
                   <div className="border-l-2 border-highlight pl-6">
                     <h3 className="font-serif text-xl">Product Manager</h3>
-                    <p className="text-muted-foreground">AI Acceleration • 2025 - Present</p>
+                    <p className="text-muted-foreground">AI Acceleration • 2025 - 2026</p>
                   </div>
                   <div className="border-l-2 border-border pl-6">
                     <h3 className="font-serif text-xl">Technical Product Manager</h3>
@@ -66,7 +66,7 @@ const About = () => {
                     <p className="text-muted-foreground">Arizona State University • 2023 - 2024</p>
                   </div>
                   <div className="border-l-2 border-border pl-6">
-                    <h3 className="font-serif text-xl">Data Scientist</h3>
+                    <h3 className="font-serif text-xl">Business Analyst </h3>
                     <p className="text-muted-foreground">Vrinsoft • 2020 - 2022</p>
                   </div>
                 </div>
@@ -91,6 +91,7 @@ const About = () => {
                     "Product Strategy",
                     "User Research",
                     "Documentation",
+                    "Gen AI",
                     "Cross-Functional Collaboration",
                     "Agile/Scrum",
                     "Data Analysis",

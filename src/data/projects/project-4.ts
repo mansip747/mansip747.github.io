@@ -4,8 +4,8 @@ import employeeDirectory from "./project-4-images/employee_directory.png";
 import fixedScopeModel from "./project-4-images/fixed_scope_model.png";
 import shiftPlanning from "./project-4-images/shift_planning.png";
 
-export const project2 = {
-  id: 2,
+export const project4 = {
+  id:4,
   slug: "warehouse-workforce-platform",
   title: "Centralizing Workforce Operations Across 25+ Warehouses",
   category: "Business Analysis",
