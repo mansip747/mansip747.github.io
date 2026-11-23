@@ -159,7 +159,7 @@ const ProjectDetail = () => {
               <img
                 src={project.heroImage}
                 alt={project.title}
-                className="w-full h-full object-cover"
+                className="w-full max-h-[480px] object-contain mx-auto"
               />
             </div>
           )}
@@ -186,7 +186,7 @@ const ProjectDetail = () => {
                         <img
                           src={section.image.url}
                           alt={section.image.caption}
-                          className="w-full h-full object-cover"
+                          className="w-full max-h-[520px] object-contain mx-auto"
                         />
                       </div>
                       <figcaption className="text-sm text-muted-foreground text-center italic">

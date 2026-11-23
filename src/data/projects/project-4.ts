@@ -11,7 +11,7 @@ export const project4 = {
   category: "Business Analysis",
   shortDescription: "How I turned scattered HR spreadsheets across 25+ warehouses into one cloud platform for scheduling, attendance, overtime and compliance, with GenAI alerts that warn managers before certifications lapse.",
   publishDate: "2026-11-22",
-  readTime: "7 min read",
+  readTime: "4 min read",
   heroImage: operationsDashboard,
   type: "internal" as const,
 
