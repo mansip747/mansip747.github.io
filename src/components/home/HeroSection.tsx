@@ -28,8 +28,8 @@ export const HeroSection = () => {
               <p className="text-lg leading-relaxed">
                 I'm a <Highlight>product manager</Highlight>,{" "}
                 <Highlight>product analyst</Highlight>,{" "}
-                <Highlight>project manager</Highlight>, and I dabble in{" "}
-                <Highlight>technical development stuff</Highlight>.
+                <Highlight>data scientist</Highlight>, and I dabble in{" "}
+                <Highlight>agentic development stuff</Highlight>.
               </p>
               
               <p className="text-lg leading-relaxed">

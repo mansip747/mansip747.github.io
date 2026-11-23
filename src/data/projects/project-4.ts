@@ -1,260 +1,204 @@
-import quintDashboard from "./project-1-images/quint_dashboard.png";
-import quintScreens from "./project-1-images/quint_screens.png";
-import quintArchitecture from "./project-1-images/quint_architecture.png";
-import dashboardDesign from "./project-1-images/dashboard_design.png";
-import geminiImage1 from "./project-1-images/Gemini_Generated_Image_ry4x5ry4x5ry4x5r.png";
-import geminiImage2 from "./project-1-images/Gemini_Generated_Image_ry4x5ry4x5ry4x5r (2).png";
-import geminiImage3 from "./project-1-images/Gemini_Generated_Image_ry4x5ry4x5ry4x5r (3).png";
-import geminiImage4 from "./project-1-images/Gemini_Generated_Image_ry4x5ry4x5ry4x5r (4).png";
+import heroOverview from "./project-4-images/case_study_overview.png";
+import workforceDashboard from "./project-4-images/workforce_dashboard.png";
+import shiftScheduling from "./project-4-images/shift_scheduling.png";
+import roadmapKpis from "./project-4-images/roadmap_kpis.png";
 
-export const project4 = {
-  id: 1,
-  slug: "quint-ai-voice-summarizer",
-  title: "Quint The AI Powered Voice Summarizer",
-  category: "Product Management",
-  shortDescription: "From Personal Project to Team Productivity Tool: How I built an AI voice summarizer that turned meeting chaos into clear action items.",
-  publishDate: "2025-12-15",
-  readTime: "8 min read",
-  heroImage: geminiImage1,
+export const project2 = {
+  id: 2,
+  slug: "warehouse-workforce-platform",
+  title: "Centralizing Workforce Operations Across 25+ Warehouses",
+  category: "Business Analysis",
+  shortDescription: "How I turned scattered HR spreadsheets across 25+ warehouses into one cloud platform for scheduling, attendance, overtime and compliance, with GenAI alerts that warn managers before certifications lapse.",
+  publishDate: "2026-11-22",
+  readTime: "7 min read",
+  heroImage: heroOverview,
   type: "internal" as const,
 
   sections: [
     {
-      title: "The Breaking Point: Why I Created Quint",
+      title: "The Problem: 25 Warehouses, 25 Ways of Tracking People",
       content: `
-        It was 7:30 PM on a Wednesday when I realized I had a problem.
+        Picture a logistics company with more than 25 warehouses. Every site had its own way of managing people: a separate HR system at one, a spreadsheet at another, and a weekly report someone built by hand at most of them.
 
-        I was still at my desk, frantically scrolling through the day's meeting notes, trying to piece together what I had committed to doing. Three back-to-back client calls, a team standup, and a product review meeting had left me with pages of scattered notes and a growing sense of anxiety.
+        No one in leadership could answer basic questions quickly. How many people are short on Saturday's night shift? Which site is burning through overtime? Whose forklift certification expires next week?
 
-        "Didn't I promise Sarah I'd send that proposal draft by tomorrow?" "Was I supposed to follow up with the engineering team about that bug, or were they going to update me?"
+        By the time the answers came back, the problem had usually already happened.
 
-        This wasn't a new problem for me. Despite trying various note-taking apps, task managers, and even hiring a virtual assistant for a brief period, I kept running into the same fundamental issue: the gap between hearing something in a meeting and turning it into completed action was where things fell apart.
-
-        That night, I sketched out what would eventually become Quint—a personal AI assistant that would not only transcribe my meetings but actively help me follow through on every commitment made.
+        The company asked Vrinsoft to build one cloud platform for its whole warehouse network. I worked on that team as the business analyst.
       `,
       image: {
-        url: geminiImage2,
-        caption: "The moment of frustration that sparked Quint — staring at scattered notes after a long day of meetings."
+        url: heroOverview,
+        caption: "Project overview: one platform for scheduling, attendance, overtime and compliance across 25+ warehouses."
       }
     },
     {
-      title: "My Personal Pain Points",
+      title: "My Role: Start With the People Doing the Work",
       content: `
-        Before writing a single line of code, I needed to be honest about my specific challenges:
+        I owned the work between the client and our engineers. That covered discovery, requirements, prioritization, the roadmap, dashboards, the GenAI alerts, and the OKRs and KPIs we used to measure success.
 
-        --> The Multi-Meeting Blur: By my third meeting of the day, details from the first meeting were already fading.
+        Before writing a single requirement, I interviewed [N] people across [N] sites: HR leads, warehouse managers and shift supervisors. I asked each of them to walk me through a normal week. How do you build next week's schedule? What happens when someone calls in sick? How do you find out a certification is about to expire?
 
-        --> Action Item Anxiety: I'd often wake up in the middle of the night remembering a task I'd forgotten to add to my to-do list.
+        Three patterns came up again and again:
 
-        --> The Follow-Up Fatigue: Even when I captured action items, drafting all the follow-up emails and messages was draining my energy.
+        --> Rebuilding the same data: Attendance lived in one place, schedules in another and certifications in a third, so supervisors were stitching them together by hand.
 
-        --> Notification Overload: My existing task apps would either bombard me with reminders or be so easily dismissed that tasks would linger for weeks.
+        --> Overtime was a surprise: Managers only saw it after the cost was already locked in.
 
-        The solution needed to address all of these issues—not just the transcription part that existing tools handled reasonably well.
+        --> Compliance ran on memory: Renewals were caught by whoever happened to remember, so some slipped through.
       `
     },
     {
-      title: "Building the Solution: My Weekend Project That Grew",
+      title: "From Interviews to Requirements",
       content: `
-        I started building Quint over a long weekend, with a simple goal: record my meetings and automatically extract action items into my to-do list.
+        I turned those conversations into a business requirements document, [N] user stories with acceptance criteria, and process maps of how scheduling, attendance and compliance worked today and how they should work.
 
-        The first version was embarrassingly simple — a React frontend with a big "Record" button, the Web Speech API for real-time transcription, and a basic NLP library to identify sentences with action-oriented language.
-
-        When I tested it in my Monday morning standup, the results were promising but flawed. It captured about 60% of the action items but missed context and created duplicate tasks.
-      `,
-      image: {
-        url: dashboardDesign,
-        caption: "The initial Quint dashboard — designed around simplicity and one-click recording."
-      }
-    },
-    {
-      title: "Phase 2: Adding Intelligence",
-      content: `
-        I realized that for Quint to truly solve my problem, it needed to understand meeting context better. I dove into improving the AI component to handle both explicit and implicit commitments.
-
-        The simple keyword-matching approach quickly proved insufficient. I needed something that could understand implied tasks, not just explicit statements. After experimenting with several NLP approaches, I integrated a more sophisticated language model that could:
-
-        --> Identify both explicit ("I'll send that report") and implicit ("That would be good to include in the documentation") commitments.
-
-        --> Recognize who was assigned the task.
-
-        --> Extract deadlines and priorities from contextual clues.
-      `,
-      image: {
-        url: geminiImage3,
-        caption: "Visualizing how Quint maps raw spoken language into structured, assignable action items."
-      }
-    },
-    {
-      title: "Phase 3: The Game-Changer — Draft Generation",
-      content: `
-        The breakthrough came when I added what I now call the "Draft Generator." I noticed that many of my action items required sending some form of communication—emails, Slack messages, or documentation updates.
-
-        What if Quint could draft these for me?
-
-        The first time this worked correctly was genuinely emotional. I had just finished a client call where I'd promised to send a project update. Within minutes of ending the call, Quint had:
-
-        --> Added "Send project timeline update to Client X" to my action items.
-
-        --> Generated a draft email with all the key points we'd discussed.
-
-        --> Set a reminder to send it by the end of day.
-
-        I made a few edits to the draft and sent it immediately—a task that would normally have taken me 30+ minutes was completed in less than 5.
-      `,
-      image: {
-        url: quintScreens,
-        caption: "Quint's action item view — each item comes pre-loaded with a generated email draft ready to send."
-      }
-    },
-    {
-      title: "From Personal Tool to Team Solution",
-      content: `
-        What started as a personal project to solve my own productivity challenges quickly caught the attention of my colleagues. During a team demo day, several product managers and project owners immediately asked if they could try Quint.
-
-        "I've been looking for exactly this solution," our senior product owner said after seeing a demo. "Can you set it up for our team?"
-
-        Within a month, Quint had gone from my personal productivity hack to a tool used by 15 product professionals across our organization. This organic adoption taught me something crucial: I wasn't alone in my struggle with meeting follow-through.
+        One requirement shaped the whole design: every warehouse needed its own view and controls, but leadership needed to see all of them in one place. That single need drove our location-level permissions, our role-based access and the way we structured the data.
       `
     },
     {
-      title: "The Technical Architecture Behind Quint",
+      title: "Being the Bridge Between Client and Engineering",
       content: `
-        As adoption grew beyond my personal use, I needed to formalize Quint's architecture and ensure it could scale reliably. The technical stack evolved into:
+        HR managers and .NET developers don't talk about problems the same way. A supervisor might say "I need to know who's short on Saturday." Engineering needs that as a rule: compare scheduled headcount to required headcount per shift, per site, and flag any gap over a threshold.
 
-        Frontend:
-        --> React 18: Utilizing the latest React features for a responsive, reactive UI.
-        --> Ant Design: Providing a clean, professional component library.
-        --> SCSS: For modular and maintainable styling.
-        --> Dexie.js: A wrapper for IndexedDB, allowing local storage of recordings and transcripts.
-
-        Core Logic & APIs:
-        --> Web Speech API: For live, real-time speech-to-text conversion.
-        --> MediaRecorder API: Handling audio capture and waveform visualization.
-        --> WebSocket: Streaming AI responses back to the client instantly.
-        --> Custom AI Service: Integrating language models for context-aware suggestions and email template generation.
-      `,
-      image: {
-        url: quintArchitecture,
-        caption: "Quint's full architecture — from raw audio input to structured AI summaries and action items."
-      }
-    },
-    {
-      title: "Product Metrics & Analysis",
-      content: `
-        As Quint expanded from personal use to a team tool, I started tracking key metrics to validate its effectiveness:
-
-        --> Time-to-Value (TTV): Average of 27 seconds from "Stop Recording" to "Action Item Copied" — beating our goal of under 30 seconds.
-
-        --> Draft Adoption Rate: 73% of AI-generated email drafts were actually sent with minor edits, against a goal of 50%.
-
-        --> Retention: 82% of users were still recording 2+ meetings per week after 8 weeks.
-
-        --> Productivity Impact: Users self-reported an average of 3.5 hours saved per week.
-
-        The most striking metric came from our team survey: 89% of users reported feeling "significantly less stressed about missing action items" after adopting Quint.
-      `,
-      image: {
-        url: quintDashboard,
-        caption: "The Quint dashboard showing live metrics — action items captured, drafts generated, and follow-ups completed."
-      }
-    },
-    {
-      title: "The Technical Challenges I Faced",
-      content: `
-        Building Quint wasn't without its frustrations. Three major challenges tested my resolve:
-
-        1. Audio Processing Reliability
-        The Web Speech API was convenient but inconsistent across browsers. I ended up implementing a hybrid approach — using the Web Speech API for real-time visual feedback while simultaneously recording raw audio for processing through a more reliable transcription service after the meeting.
-
-        2. Context Preservation
-        Early versions would sometimes generate follow-up drafts that missed crucial context from earlier in the meeting. The solution was implementing a "conversation memory" system that tracked topics, participants, and decisions throughout the call.
-
-        3. The Notification Problem
-        Getting the notification system right was surprisingly difficult. I implemented "progressive persistence" — reminders that increase in frequency as the deadline approaches, with different channels based on task priority and a "snooze but don't forget" option that would temporarily hide but never delete a task.
+        Much of my week went to that translation. I ran weekly syncs with the client, turned their feedback into specs, and cleared up open questions before they turned into rework.
       `
     },
     {
-      title: "The 'Blank Page' Psychology",
+      title: "Deciding What to Build First",
       content: `
-        One of the most interesting insights from our team's use of Quint came from observing how people interacted with the draft generation feature.
+        By the end of discovery we had [N] feature requests. Building all of them at once would have delayed launch by months. I scored each one on business impact against engineering effort, then sorted them into three groups with the client:
 
-        I discovered that users don't hate writing; they hate starting. By having Quint generate a "Draft Email"—even if it's imperfect—users were 5x more likely to send the email because they just had to edit it, not write it from scratch.
+        --> Must have at launch: A central employee database, attendance and overtime tracking, shift scheduling for each site, and role-based access.
 
-        This psychological insight helped me refine the draft generation to focus less on perfect accuracy and more on providing a solid starting point that reduced the activation energy required to complete a task.
+        --> Should have, right after: Multi-site dashboards, leave and approval workflows, GenAI compliance alerts and document management.
+
+        --> Deferred: [Requests you deprioritized, and why].
+
+        Saying "not yet" was the hardest part. What helped was tying every request back to the problems from discovery. If a feature didn't move staffing visibility, admin time or compliance, it waited.
+      `
+    },
+    {
+      title: "A Roadmap Built to Scale",
+      content: `
+        I helped build a phased roadmap so each release laid the groundwork for the next:
+
+        1. Foundation
+        A unified employee database, cloud setup on Azure and role-based access.
+
+        2. Operations
+        Scheduling, attendance, overtime and leave workflows.
+
+        3. Insight
+        Dashboards and reporting for each site and the whole company.
+
+        4. Intelligence
+        Azure OpenAI compliance alerts with a manager review step.
+
+        5. Next
+        [Future items on the long-term roadmap].
+
+        Because the platform was designed for many locations from day one, a new warehouse could be added through setup instead of new code.
       `,
       image: {
-        url: geminiImage4,
-        caption: "The 'blank page' problem — and how Quint's draft generation eliminates it entirely."
+        url: roadmapKpis,
+        caption: "How I prioritized features, the phased roadmap, and the OKRs we tracked."
       }
     },
     {
-      title: "The Results: A Team Productivity Revolution",
+      title: "Designing Dashboards People Would Actually Open",
       content: `
-        After six months of team use, the impact of Quint has been profound:
+        I designed the dashboards around the questions managers asked in interviews, not around whatever data happened to be available. Each view had to answer one question in a few seconds:
 
-        --> Nothing Falls Through the Cracks: Task completion rates increased from 76% to 94%.
+        --> Are we staffed? Open shifts and staffing gaps for the next 7 days, worst first.
 
-        --> Faster Follow-Ups: The average time between meeting end and completing follow-up tasks dropped from 26 hours to 3.5 hours.
+        --> Where is overtime building up? Overtime as a share of hours, by warehouse, against the target.
 
-        --> More Present in Meetings: Team members reported being able to focus more on the conversation rather than frantically taking notes.
+        --> Who's at risk on compliance? Certifications and training due in the next 7, 21 and 30 days.
 
-        --> Meeting Efficiency: Our meetings became shorter by an average of 12%, as less time was spent clarifying previous action items.
+        Site managers saw their own warehouse. Leadership saw all 25+ sites side by side.
+      `,
+      image: {
+        url: workforceDashboard,
+        caption: "Multi-location workforce dashboard (recreated with sample data): staffing gaps, overtime by site and AI compliance alerts."
+      }
+    },
+    {
+      title: "Adding GenAI to Compliance",
+      content: `
+        The compliance problem was a good fit for AI. The data already existed (employee records, certification dates, training requirements), but nobody had time to watch it.
 
-        The most unexpected benefit has been emotional: the reduction in anxiety knowing that Quint has everyone's back has improved overall team well-being and reduced the friction in collaborative work.
+        I defined the requirements for Azure OpenAI alerts. They scan workforce records for upcoming certification renewals and training deadlines, then write a plain-language alert a manager can act on, for example: "9 forklift certifications at one site expire next week, and 4 of those operators are on the weekend schedule."
+
+        The AI makes suggestions and people make the decisions. Every alert goes to a manager to review before anyone is notified, and the scheduling screen flags anyone whose certification would lapse before their shift.
+      `,
+      image: {
+        url: shiftScheduling,
+        caption: "Shift scheduling screen (recreated with sample data), with a built-in check for certifications that would lapse before a shift."
+      }
+    },
+    {
+      title: "Measuring Success: OKRs & KPIs",
+      content: `
+        I set OKRs with the client before launch, so we'd agree on what "working" meant. I then reported progress to client leadership every [week/month].
+
+        --> One source of workforce truth: 25+ sites live on the platform.
+
+        --> Cut manual HR admin: Hours per week spent on manual reports down [X]%.
+
+        --> Drive adoption: [X]% of HR and site managers active every week.
+
+        --> Stay ahead of compliance: [X]% of renewals completed before expiry.
+
+        --> Better staffing decisions: Time to fill an open shift down to [X] hours.
+      `
+    },
+    {
+      title: "The Results",
+      content: `
+        The platform rolled out across the client's whole warehouse network, and HR teams and warehouse managers adopted it quickly for day-to-day work.
+
+        --> One place for everything: Employee records, schedules, attendance and compliance now live in a single system instead of a dozen spreadsheets.
+
+        --> Faster reporting: Reports come out without manual delays.
+
+        --> Fewer compliance surprises: Managers hear about expiring certifications before they turn into a risk on the floor.
       `
     },
     {
       title: "Lessons Learned",
       content: `
-        Building Quint taught me several valuable lessons about both product development and personal productivity:
+        1. Data Problems Are Really Process Problems
+        The spreadsheets weren't the issue. Each site had built its own process to cope without a shared system, and fixing that meant agreeing on one way of working before we wrote any code.
 
-        1. The Power of Solving Your Own Problems
-        By building something specifically for my own workflow rather than trying to create a "one-size-fits-all" solution, I ended up with something far more effective than any commercial product I'd tried.
+        2. Prioritization Is Easier When Everyone Shares the Same Evidence
+        Tying every request to what we heard in discovery turned "no" into "not yet, and here's why."
 
-        2. The "Good Enough" Principle
-        Early in development, I obsessed over transcription accuracy, aiming for 98%+ precision. But user testing revealed something surprising: users cared far more about speed and the quality of the summary than perfect transcription. As one user put it: "I don't need a perfect transcript. I need to know what I'm supposed to do next."
+        3. AI Earns Trust When People Stay in Control
+        The alerts were adopted because managers reviewed them, not because they ran automatically.
 
-        3. The Completion Gap
-        There's a crucial difference between knowing what needs to be done and actually doing it. Most productivity tools focus on the former while ignoring the friction in the latter. By generating drafts and providing persistent reminders, Quint bridges that gap.
-
-        4. Technical Debt vs. User Feedback
-        I faced a classic dilemma: rewrite the audio processing system or implement user-requested features. I chose to prioritize user-facing improvements first — it allowed us to validate the core value proposition before investing in infrastructure.
-      `
-    },
-    {
-      title: "What's Next for Quint",
-      content: `
-        Based on the success within our team and continued user feedback, the roadmap for Quint includes:
-
-        --> Team Intelligence: Recognizing recurring action patterns and suggesting process improvements.
-
-        --> Integration Ecosystem: Connecting with task management tools like Asana, Jira, and Monday.com.
-
-        --> Meeting Analytics: Providing insights into meeting effectiveness and follow-through rates.
-
-        --> Voice Command Mode: Adding the ability to create and manage tasks through voice commands while driving or walking.
+        4. [Your Own Lesson]
+        [Something that surprised you or that you'd do differently.]
       `
     }
   ],
 
   impact: [
-    "Task completion rates increased from 76% to 94%",
-    "Follow-up time dropped from 26 hours to 3.5 hours",
-    "73% of AI-generated email drafts were sent by users",
-    "82% user retention after 8 weeks",
-    "Average 3.5 hours saved per user per week"
+    "Rolled out one workforce platform across 25+ warehouses",
+    "[X]% less time spent on manual workforce reporting",
+    "[X]% of certification renewals completed before expiry",
+    "[X]% of HR and site managers active every week"
   ],
 
-  technologies: ["React 18", "Ant Design", "SCSS", "Dexie.js", "Web Speech API", "MediaRecorder API", "WebSocket", "LLMs"],
+  technologies: ["Angular", ".NET Core", "Microsoft SQL Server", "Microsoft Azure", "Azure OpenAI", "[Your dashboard tool]"],
 
   myRole: `
-    As the sole builder and Product Manager, I was responsible for the entire product lifecycle — from identifying my own pain points and sketching the initial concept, through technical architecture, implementation, user testing, and scaling the tool from personal use to a team of 15 product professionals.
+    As the Business Analyst on the Vrinsoft team, I owned the work between the client and engineering: stakeholder interviews, requirements and documentation, feature prioritization, the long-term roadmap, dashboard design, requirements for the GenAI compliance alerts, and the OKRs and KPIs we used to measure success.
   `,
 
+  // Only keep a testimonial if it's a real quote you have permission to use. Otherwise delete this block.
   testimonial: {
-    quote: "Quint doesn't just save me time — it saves my attention. I can be fully present in meetings knowing that the details won't slip through the cracks.",
-    author: "Product Manager",
-    role: "Team Member",
+    quote: "[Real quote from the client or your manager]",
+    author: "[Name or title]",
+    role: "[Role]",
   },
 };
