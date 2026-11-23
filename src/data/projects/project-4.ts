@@ -1,8 +1,8 @@
-import operationsDashboard from "./project-4-images/operations_dashboard.png";
+import operationsDashboard from "./project-4-images/operations.dashboard.png";
 import attendanceMeeting from "./project-4-images/attendance.meeting.png";
-import employeeDirectory from "./project-4-images/employee_directory.png";
-import fixedScopeModel from "./project-4-images/fixed_scope_model.png";
-import shiftPlanning from "./project-4-images/shift_planning.png";
+import employeeDirectory from "./project-4-images/employee.directory.png";
+import fixedScopeModel from "./project-4-images/fixed.scope.model.png";
+import shiftPlanning from "./project-4-images/shift.planning.png";
 
 export const project4 = {
   id:4,
@@ -133,7 +133,7 @@ export const project4 = {
         The AI makes suggestions and people make the decisions. Every alert goes to a manager to review before anyone is notified, and the scheduling screen flags anyone whose certification would lapse before their shift.
       `,
       image: {
-        url: attendanceMeeting,
+        url: shiftPlanning,
         caption: "Shift scheduling screen (recreated with sample data), with a built-in check for certifications that would lapse before a shift."
       }
     },
@@ -179,7 +179,11 @@ export const project4 = {
 
         4. [Your Own Lesson]
         [Something that surprised you or that you'd do differently.]
-      `
+      `,
+      image: {
+        url: attendanceMeeting,
+        caption: "Shift scheduling screen (recreated with sample data), with a built-in check for certifications that would lapse before a shift."
+      }
     }
   ],
 
