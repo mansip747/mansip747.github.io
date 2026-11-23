@@ -5,7 +5,7 @@ import fixedScopeModel from "./project-4-images/fixed.scope.model.png";
 import shiftPlanning from "./project-4-images/shift.planning.png";
 
 export const project4 = {
-  id:4,
+  id: 4,
   slug: "warehouse-workforce-platform",
   title: "Centralizing Workforce Operations Across 25+ Warehouses",
   category: "Business Analysis",
@@ -19,13 +19,13 @@ export const project4 = {
     {
       title: "The Problem: 25 Warehouses, 25 Ways of Tracking People",
       content: `
-        Picture a logistics company with more than 25 warehouses. Every site had its own way of managing people: a separate HR system at one, a spreadsheet at another, and a weekly report someone built by hand at most of them.
+        Picture a logistics company with more than 25 warehouses. Every site managed its people in its own way: a separate HR system at one, a spreadsheet at another, and at most of them a weekly report someone built by hand.
 
         No one in leadership could answer basic questions quickly. How many people are short on Saturday's night shift? Which site is burning through overtime? Whose forklift certification expires next week?
 
         By the time the answers came back, the problem had usually already happened.
 
-        The company asked Vrinsoft to build one cloud platform for its whole warehouse network. I worked on that team as the business analyst.
+        The company asked to build one cloud platform for its whole warehouse network. I worked on that team as the business analyst.
       `,
       image: {
         url: operationsDashboard,
@@ -37,11 +37,11 @@ export const project4 = {
       content: `
         I owned the work between the client and our engineers. That covered discovery, requirements, prioritization, the roadmap, dashboards, the GenAI alerts, and the OKRs and KPIs we used to measure success.
 
-        Before writing a single requirement, I interviewed [N] people across [N] sites: HR leads, warehouse managers and shift supervisors. I asked each of them to walk me through a normal week. How do you build next week's schedule? What happens when someone calls in sick? How do you find out a certification is about to expire?
+        Before writing a single requirement, I interviewed HR leads, warehouse managers and shift supervisors across multiple sites. I asked each of them to walk me through a normal week. How do you build next week's schedule? What happens when someone calls in sick? How do you find out a certification is about to expire?
 
         Three patterns came up again and again:
 
-        --> Rebuilding the same data: Attendance lived in one place, schedules in another and certifications in a third, so supervisors were stitching them together by hand.
+        --> Rebuilding the same data: Attendance lived in one place, schedules in another and certifications in a third, so supervisors stitched them together by hand.
 
         --> Overtime was a surprise: Managers only saw it after the cost was already locked in.
 
@@ -51,7 +51,7 @@ export const project4 = {
     {
       title: "From Interviews to Requirements",
       content: `
-        I turned those conversations into a business requirements document, [N] user stories with acceptance criteria, and process maps of how scheduling, attendance and compliance worked today and how they should work.
+        I turned those conversations into a business requirements document, user stories with clear acceptance criteria, and process maps showing how scheduling, attendance and compliance worked today and how they should work in the new platform.
 
         One requirement shaped the whole design: every warehouse needed its own view and controls, but leadership needed to see all of them in one place. That single need drove our location-level permissions, our role-based access and the way we structured the data.
       `
@@ -67,15 +67,15 @@ export const project4 = {
     {
       title: "Deciding What to Build First",
       content: `
-        By the end of discovery we had [N] feature requests. Building all of them at once would have delayed launch by months. I scored each one on business impact against engineering effort, then sorted them into three groups with the client:
+        Discovery left us with a long list of feature requests. Building everything at once would have pushed launch back by months. I scored each request on business impact against engineering effort, then sorted them with the client into three groups:
 
         --> Must have at launch: A central employee database, attendance and overtime tracking, shift scheduling for each site, and role-based access.
 
         --> Should have, right after: Multi-site dashboards, leave and approval workflows, GenAI compliance alerts and document management.
 
-        --> Deferred: [Requests you deprioritized, and why].
+        --> Later: Anything that didn't clearly connect to a problem we heard in discovery went to the backlog for a future phase.
 
-        Saying "not yet" was the hardest part. What helped was tying every request back to the problems from discovery. If a feature didn't move staffing visibility, admin time or compliance, it waited.
+        Saying "not yet" was the hardest part. What helped was tying every request back to the discovery findings. If a feature didn't improve staffing visibility, admin time or compliance, it waited.
       `
     },
     {
@@ -90,13 +90,10 @@ export const project4 = {
         Scheduling, attendance, overtime and leave workflows.
 
         3. Insight
-        Dashboards and reporting for each site and the whole company.
+        Dashboards and reporting for each site and for the whole company.
 
         4. Intelligence
         Azure OpenAI compliance alerts with a manager review step.
-
-        5. Next
-        [Future items on the long-term roadmap].
 
         Because the platform was designed for many locations from day one, a new warehouse could be added through setup instead of new code.
       `,
@@ -128,9 +125,9 @@ export const project4 = {
       content: `
         The compliance problem was a good fit for AI. The data already existed (employee records, certification dates, training requirements), but nobody had time to watch it.
 
-        I defined the requirements for Azure OpenAI alerts. They scan workforce records for upcoming certification renewals and training deadlines, then write a plain-language alert a manager can act on, for example: "9 forklift certifications at one site expire next week, and 4 of those operators are on the weekend schedule."
+        I defined the requirements for Azure OpenAI alerts. They scan workforce records for upcoming certification renewals and training deadlines, then write a plain-language alert a manager can act on. For example: "9 forklift certifications at one site expire next week, and 4 of those operators are on the weekend schedule."
 
-        The AI makes suggestions and people make the decisions. Every alert goes to a manager to review before anyone is notified, and the scheduling screen flags anyone whose certification would lapse before their shift.
+        The AI makes suggestions and people make the decisions. Every alert goes to a manager for review before anyone is notified, and the scheduling screen flags anyone whose certification would lapse before their shift.
       `,
       image: {
         url: shiftPlanning,
@@ -140,17 +137,17 @@ export const project4 = {
     {
       title: "Measuring Success: OKRs & KPIs",
       content: `
-        I set OKRs with the client before launch, so we'd agree on what "working" meant. I then reported progress to client leadership every [week/month].
+        I set OKRs with the client before launch so we agreed on what "working" meant, and I reported progress to client leadership through our regular syncs.
 
-        --> One source of workforce truth: 25+ sites live on the platform.
+        --> One source of workforce truth: Every warehouse running on the same platform.
 
-        --> Cut manual HR admin: Hours per week spent on manual reports down [X]%.
+        --> Less manual HR admin: Time HR and site teams spent building reports by hand.
 
-        --> Drive adoption: [X]% of HR and site managers active every week.
+        --> Real adoption: How many HR and site managers used the platform week to week.
 
-        --> Stay ahead of compliance: [X]% of renewals completed before expiry.
+        --> Staying ahead of compliance: The share of certifications and training renewed before they expired.
 
-        --> Better staffing decisions: Time to fill an open shift down to [X] hours.
+        --> Better staffing decisions: How quickly open shifts were filled.
       `
     },
     {
@@ -158,9 +155,9 @@ export const project4 = {
       content: `
         The platform rolled out across the client's whole warehouse network, and HR teams and warehouse managers adopted it quickly for day-to-day work.
 
-        --> One place for everything: Employee records, schedules, attendance and compliance now live in a single system instead of a dozen spreadsheets.
+        --> One place for everything: Employee records, schedules, attendance and compliance now live in one system instead of scattered spreadsheets.
 
-        --> Faster reporting: Reports come out without manual delays.
+        --> Faster reporting: Reports come straight from the platform instead of being built by hand each week.
 
         --> Fewer compliance surprises: Managers hear about expiring certifications before they turn into a risk on the floor.
       `
@@ -175,35 +172,25 @@ export const project4 = {
         Tying every request to what we heard in discovery turned "no" into "not yet, and here's why."
 
         3. AI Earns Trust When People Stay in Control
-        The alerts were adopted because managers reviewed them, not because they ran automatically.
-
-        4. [Your Own Lesson]
-        [Something that surprised you or that you'd do differently.]
+        Managers adopted the alerts because they reviewed them, not because they ran automatically.
       `,
       image: {
         url: attendanceMeeting,
-        caption: "Shift scheduling screen (recreated with sample data), with a built-in check for certifications that would lapse before a shift."
+        caption: "Attendance tracking view (recreated with sample data)."
       }
     }
   ],
 
   impact: [
     "Rolled out one workforce platform across 25+ warehouses",
-    "[X]% less time spent on manual workforce reporting",
-    "[X]% of certification renewals completed before expiry",
-    "[X]% of HR and site managers active every week"
+    "Replaced manual, site-by-site reporting with live dashboards",
+    "Gave managers early warning on expiring certifications through GenAI alerts",
+    "Made it possible to add a new warehouse through setup instead of new code"
   ],
 
-  technologies: ["Angular", ".NET Core", "Microsoft SQL Server", "Microsoft Azure", "Azure OpenAI", "[Your dashboard tool]"],
+  technologies: ["Angular", ".NET Core", "Microsoft SQL Server", "Microsoft Azure", "Azure OpenAI"],
 
   myRole: `
-    As the Business Analyst on the Vrinsoft team, I owned the work between the client and engineering: stakeholder interviews, requirements and documentation, feature prioritization, the long-term roadmap, dashboard design, requirements for the GenAI compliance alerts, and the OKRs and KPIs we used to measure success.
+    As the Business Analyst on the team, I owned the work between the client and engineering: stakeholder interviews, requirements and documentation, feature prioritization, the long-term roadmap, dashboard design, requirements for the GenAI compliance alerts, and the OKRs and KPIs we used to measure success.
   `,
-
-  // Only keep a testimonial if it's a real quote you have permission to use. Otherwise delete this block.
-  testimonial: {
-    quote: "[Real quote from the client or your manager]",
-    author: "[Name or title]",
-    role: "[Role]",
-  },
-};
+}
