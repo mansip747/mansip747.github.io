@@ -1,7 +1,8 @@
-import heroOverview from "./project-4-images/case_study_overview.png";
-import workforceDashboard from "./project-4-images/workforce_dashboard.png";
-import shiftScheduling from "./project-4-images/shift_scheduling.png";
-import roadmapKpis from "./project-4-images/roadmap_kpis.png";
+import operationsDashboard from "./project-4-images/operations_dashboard.png";
+import attendanceMeeting from "./project-4-images/attendance.meeting.png";
+import employeeDirectory from "./project-4-images/employee_directory.png";
+import fixedScopeModel from "./project-4-images/fixed_scope_model.png";
+import shiftPlanning from "./project-4-images/shift_planning.png";
 
 export const project2 = {
   id: 2,
@@ -11,7 +12,7 @@ export const project2 = {
   shortDescription: "How I turned scattered HR spreadsheets across 25+ warehouses into one cloud platform for scheduling, attendance, overtime and compliance, with GenAI alerts that warn managers before certifications lapse.",
   publishDate: "2026-11-22",
   readTime: "7 min read",
-  heroImage: heroOverview,
+  heroImage: operationsDashboard,
   type: "internal" as const,
 
   sections: [
@@ -27,7 +28,7 @@ export const project2 = {
         The company asked Vrinsoft to build one cloud platform for its whole warehouse network. I worked on that team as the business analyst.
       `,
       image: {
-        url: heroOverview,
+        url: operationsDashboard,
         caption: "Project overview: one platform for scheduling, attendance, overtime and compliance across 25+ warehouses."
       }
     },
@@ -100,7 +101,7 @@ export const project2 = {
         Because the platform was designed for many locations from day one, a new warehouse could be added through setup instead of new code.
       `,
       image: {
-        url: roadmapKpis,
+        url: fixedScopeModel,
         caption: "How I prioritized features, the phased roadmap, and the OKRs we tracked."
       }
     },
@@ -118,7 +119,7 @@ export const project2 = {
         Site managers saw their own warehouse. Leadership saw all 25+ sites side by side.
       `,
       image: {
-        url: workforceDashboard,
+        url: employeeDirectory,
         caption: "Multi-location workforce dashboard (recreated with sample data): staffing gaps, overtime by site and AI compliance alerts."
       }
     },
@@ -132,7 +133,7 @@ export const project2 = {
         The AI makes suggestions and people make the decisions. Every alert goes to a manager to review before anyone is notified, and the scheduling screen flags anyone whose certification would lapse before their shift.
       `,
       image: {
-        url: shiftScheduling,
+        url: attendanceMeeting,
         caption: "Shift scheduling screen (recreated with sample data), with a built-in check for certifications that would lapse before a shift."
       }
     },
