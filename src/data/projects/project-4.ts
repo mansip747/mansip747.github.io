@@ -1,4 +1,5 @@
 import operationsDashboard from "./project-4-images/operations.dashboard.png";
+import heroImg from "./project-4-images/hero.img.png";
 import attendanceMeeting from "./project-4-images/attendance.meeting.png";
 import employeeDirectory from "./project-4-images/employee.directory.png";
 import fixedScopeModel from "./project-4-images/fixed.scope.model.png";
@@ -10,9 +11,9 @@ export const project4 = {
   title: "Centralizing Workforce Operations Across 25+ Warehouses",
   category: "Business Analysis",
   shortDescription: "How I turned scattered HR spreadsheets across 25+ warehouses into one cloud platform for scheduling, attendance, overtime and compliance, with GenAI alerts that warn managers before certifications lapse.",
-  publishDate: "2026-11-22",
+  publishDate: "2023-6-15",
   readTime: "4 min read",
-  heroImage: operationsDashboard,
+  heroImage: heroImg,
   type: "internal" as const,
 
   sections: [
@@ -25,7 +26,7 @@ export const project4 = {
 
         By the time the answers came back, the problem had usually already happened.
 
-        The company asked to build one cloud platform for its whole warehouse network. I worked on that team as the business analyst.
+        The company was asked to build one cloud platform for its whole warehouse network. I worked on that team as the business analyst.
       `,
       image: {
         url: operationsDashboard,
